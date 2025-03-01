@@ -1,0 +1,37 @@
+<div id="form-area">
+  <h1>{{ getTitle() }}</h1>
+  <form
+    *transloco="let t; read: 'ideas.form'"
+    id="idea-form"
+    [formGroup]="ideaFormGroup"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="mb-3">
+      <label for="idea-name" class="form-label">{{ t("name") }}</label>
+      <input class="form-control" id="idea-name" formControlName="name" />
+    </div>
+    <div class="mb-3">
+      <label for="idea-description" class="form-label">{{
+        t("description")
+      }}</label>
+      <input
+        class="form-control"
+        id="idea-description"
+        formControlName="description"
+      />
+    </div>
+  </form>
+  <div id="button-area" *transloco="let t; read: 'common'">
+    <button
+      type="button"
+      class="btn btn-primary"
+      [disabled]="!ideaFormGroup.valid"
+      (click)="onSubmit()"
+    >
+      {{ t("save") }}
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="onCancelClick()">
+      {{ t("cancel") }}
+    </button>
+  </div>
+</div>

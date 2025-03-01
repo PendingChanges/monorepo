@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<ItemGroup>
+		<PackageReference Include="HotChocolate.AspNetCore" Version="15.0.3" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.2" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.2" />
+		<PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Infrastructure.Api\Infrastructure.Api.csproj" />
+	  <ProjectReference Include="..\Journalist.Crm.CommandHandlers\Journalist.Crm.CommandHandlers.csproj" />
+	  <ProjectReference Include="..\Journalist.Crm.GraphQL\Journalist.Crm.GraphQL.csproj" />
+	  <ProjectReference Include="..\Journalist.Crm.Marten\Journalist.Crm.Marten.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\" />
+	</ItemGroup>
+
+</Project>

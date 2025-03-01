@@ -1,0 +1,24 @@
+<div id="form-area" *transloco="let t">
+  <h1>{{ getTitle() }}</h1>
+  <form id="client-form" [formGroup]="clientFormGroup" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="client-name" class="form-label">{{
+        t("clients.table.name")
+      }}</label>
+      <input id="client-name" class="form-control" formControlName="name" />
+    </div>
+  </form>
+  <div id="button-area">
+    <button
+      type="button"
+      class="btn btn-primary"
+      [disabled]="!clientFormGroup.valid"
+      (click)="onSubmit()"
+    >
+      {{ t("common.save") }}
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="onCancelClick()">
+      {{ t("common.cancel") }}
+    </button>
+  </div>
+</div>

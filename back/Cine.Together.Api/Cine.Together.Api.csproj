@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.2" />
+		<PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Cine.Together.GraphQL\Cine.Together.GraphQL.csproj" />
+	  <ProjectReference Include="..\Cine.Together.Marten\Cine.Together.Marten.csproj" />
+	  <ProjectReference Include="..\Infrastructure.Api\Infrastructure.Api.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\" />
+	</ItemGroup>
+
+</Project>

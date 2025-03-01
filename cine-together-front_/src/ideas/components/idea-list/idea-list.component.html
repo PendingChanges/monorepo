@@ -1,0 +1,13 @@
+<div
+  class="container shadow"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="150"
+  (scrolled)="onScroll()"
+>
+  <app-idea-list-item
+    *ngFor="let idea of ideas$ | async"
+    [idea]="idea"
+  ></app-idea-list-item>
+  <app-loading-row [loading]="loading$ | async"></app-loading-row>
+</div>

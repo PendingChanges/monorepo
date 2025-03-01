@@ -1,0 +1,14 @@
+model
+  schema 1.1
+
+type user
+type client
+  relations
+    define owner: [user]
+    define can_view: owner or admin
+type idea
+  relations
+    define owner: [user]
+type pitch
+  relations
+    define owner: [user]

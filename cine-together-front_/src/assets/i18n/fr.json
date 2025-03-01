@@ -1,0 +1,62 @@
+{
+  "clients": {
+    "title": "Clients",
+    "table": {
+      "name": "Nom",
+      "nbOfPitches": "Nb de pitches",
+      "select": "Sélectionner"
+    },
+    "add_client": "Ajouter un client",
+    "modify_client": "Modifier {{clientName}}"
+  },
+  "ideas": {
+    "title": "Idées",
+    "table": {
+      "name": "Nom",
+      "description": "Description",
+      "nbOfPitches": "Nb de pitches",
+      "select": "Sélectionner"
+    },
+    "form": {
+      "name": "Nom",
+      "description": "Description"
+    },
+    "add_idea": "Ajouter une idée",
+    "modify_idea": "Modifier {{ideaName}}"
+  },
+  "pitches": {
+    "title": "Pitches",
+    "add_pitch": "Ajouter un pitch",
+    "fill_the_client": "Sélectionner un client",
+    "fill_the_idea": "Sélectionner une idée",
+    "fill_the_pitch": "Fill the pitch",
+    "form": {
+      "title": "Titre",
+      "deadLineDate": "Deadline Date",
+      "issueDate": "Issue Date",
+      "client": "Client",
+      "idea": "Idea"
+    },
+    "table": {
+      "title": "Titre",
+      "content": "Synopsis",
+      "idea": "Idée",
+      "client": "Client"
+    },
+    "modify_pitch": "Modifier {{pitchTitle}}"
+  },
+  "common": {
+    "delete": "Supprimer",
+    "items_per_page": "Nb d'éléménts par page",
+    "range_page": "Page {{first}} sur {{last}}",
+    "first_page": "Première page",
+    "last_page": "Dernière page",
+    "next_page": "Page suivante",
+    "previous_page": "Page précédente",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "save": "Sauvegarder",
+    "cancel": "Annuler",
+    "disconnect": "Se déconnecter"
+  }
+}

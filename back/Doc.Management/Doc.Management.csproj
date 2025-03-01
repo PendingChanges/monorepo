@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<InternalsVisibleTo Include="Doc.Management.UnitTests" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Tags\" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\CQRS\CQRS.csproj" />
+		<ProjectReference Include="..\Domain.Common\Domain.Common.csproj" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,97 @@
+using Cine.Together.Domain;
+using Cine.Together.Marten;
+using Cine.Together.GraphQL;
+using Cine.Together.Api.Infrastructure;
+using Microsoft.AspNetCore.Authorization;
+using Serilog;
+using Serilog.Formatting.Compact;
+using CQRS;
+
+namespace Cine.Together.Api;
+
+internal static class Program
+{
+    private static void Main(string[] args)
+    {
+        Log.Logger = new LoggerConfiguration()
+            .WriteTo.Console(new RenderedCompactJsonFormatter())
+            .CreateLogger();
+
+        try
+        {
+            Log.Information("Starting web application");
+
+            var MyAllowSpecificOrigins = "LocalOnly";
+
+            var builder = WebApplication.CreateBuilder(args);
+            var configuration = builder.Configuration;
+
+            var authenticationOptions = configuration
+                .GetSection(KeycloakAuthenticationOptions.Section)
+                .Get<KeycloakAuthenticationOptions>();
+
+            builder.Host.UseSerilog();
+                
+            // Add services to the container.
+            builder.Services
+                .AddCommandHandlers()
+                 .AddCineTogetherMarten(configuration)
+                .AddCineTogetherGraphQL()
+                .AddHealthChecks();
+
+            builder.Services.AddHttpContextAccessor()
+                            .AddTransient<IContext, Context>();
+
+            builder.Services.AddKeycloackAuthentication(authenticationOptions!);
+
+            builder.Services.AddAuthorizationBuilder()
+                .AddDefaultPolicy("Default", policy => policy.RequireAuthenticatedUser())
+                .AddPolicy("Administrators", policy => policy.RequireClaim("roles", "[admin]"))
+                .AddPolicy("Users", policy => policy.RequireClaim("roles", "[user]"));
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                                      policy =>
+                                      {
+                                          policy.AllowAnyOrigin()
+                                                .AllowAnyHeader()
+                                                .AllowAnyMethod();
+                                      });
+            });
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+
+            app.UseHttpsRedirection();
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+            app.MapGraphQL();
+            app.UseCors(MyAllowSpecificOrigins);
+            app.MapWhen(context => !(context.Request.Path.Value ?? string.Empty).Contains("/graphql") && !(context.Request.Path.Value ?? string.Empty).Contains("/healthz"), app =>
+            {
+                app.Use((context, next) =>
+                {
+                    context.Request.Path = "/index.html";
+                    return next();
+                }).UseStaticFiles();
+            });
+            app.MapHealthChecks("/healthz");
+
+
+            app.Run();
+        }
+        catch (Exception ex)
+        {
+            Log.Fatal(ex, "Host terminated unexpectedly");
+        }
+        finally
+        {
+            Log.CloseAndFlush();
+        }
+    }
+}

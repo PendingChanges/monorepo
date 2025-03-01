@@ -1,0 +1,13 @@
+<ng-container *transloco="let t; read: 'pitches'">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col">
+        <h1>{{ t("title") }}</h1>
+      </div>
+    </div>
+    <div class="action-list">
+      <app-pitches-action-menu></app-pitches-action-menu>
+    </div>
+    <app-pitch-list [showClient]="true" [showIdea]="true"></app-pitch-list>
+  </div>
+</ng-container>

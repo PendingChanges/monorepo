@@ -1,0 +1,14 @@
+<div
+  *transloco="let t; read: 'clients.table'"
+  class="container shadow"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="150"
+  (scrolled)="onScroll()"
+>
+  <app-client-list-item
+    *ngFor="let client of clients$ | async"
+    [client]="client"
+  ></app-client-list-item>
+  <app-loading-row [loading]="loading$ | async"></app-loading-row>
+</div>
