@@ -1,4 +1,5 @@
-﻿using BetterNote.Infrastructure.GraphQL.Tags;
+﻿using BetterNote.Infrastructure.GraphQL.Subjects;
+using BetterNote.Infrastructure.GraphQL.Tags;
 using Infractructure.GraphQL;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,8 +14,10 @@ public static class ServiceCollectionExtensions
             builder
                 .AddQueryType(q => q.Name("Query"))
                     .AddType<TagQueries>()
+                    .AddType<SubjectQueries>()
                 .AddMutationType(m => m.Name("Mutation"))
                     .AddType<TagMutations>()
+                    .AddType<SubjectMutations>()
                     ;
         });
 

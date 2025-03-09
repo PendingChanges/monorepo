@@ -4,7 +4,6 @@
     <ProjectReference Include="..\Domain.Common\Domain.Common.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Subjects\Events\" />
     <Folder Include="Teams\" />
     <Folder Include="Persons\" />
   </ItemGroup>
