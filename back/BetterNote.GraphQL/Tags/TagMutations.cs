@@ -1,5 +1,4 @@
-﻿using BetterNote.Domain.Tags;
-using BetterNote.Tags.Commands;
+﻿using BetterNote.Tags.Commands;
 using CQRS;
 using HotChocolate;
 using HotChocolate.Types;
@@ -11,15 +10,15 @@ namespace BetterNote.Infrastructure.GraphQL.Tags;
 public class TagMutations
 {
     [GraphQLName("createTag")]
-    public async Task<TagCreatedResult> CreateTagAsync(
+    public async Task<Guid> CreateTagAsync(
         [Service] ISender sender, 
         [Service] IContext context, 
-        CreateTagInput input)
+        string value)
     {
-        var createTag = new WrappedCommand<CreateTag, Domain.Tags.Tag>(new CreateTag(input.Value), context.UserId);
+        var createTag = new WrappedCommand<CreateTag, Domain.Tags.Tag>(new CreateTag(value), context.UserId);
         var aggregate = await sender.Send(createTag);
 
-        return new TagCreatedResult(aggregate.Id);
+        return aggregate.Id;
     }
 
     [GraphQLName("deleteTag")]

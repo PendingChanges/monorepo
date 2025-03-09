@@ -6,13 +6,23 @@ public sealed class Tag : Aggregate
 {
     public string Value { get; set; }
     public bool Deleted { get; set; }
+    readonly IReadOnlyCollection<string> _existingTagValues;
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-    public Tag() { }
+    public Tag(IReadOnlyCollection<string>? existingTagValues = null)
+    {
+        _existingTagValues = existingTagValues ?? new List<string>();
+    }
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public AggregateResult CreateTag(string value)
     {
         var result = AggregateResult.Create();
+
+        if(_existingTagValues.Contains(value))
+        {
+            result.AddError(new DomainError(WellKnownErrors.TagAlreadyExists, WellKnownErrors.Messages.GetValueOrDefault(WellKnownErrors.TagAlreadyExists) ?? "Unknwon"));
+            return result;
+        }
 
         var id = Guid.NewGuid();
 
@@ -31,7 +41,7 @@ public sealed class Tag : Aggregate
         if (Deleted)
         {
             //TODO : create an error builder
-            result.AddError(new Error(WellKnownErrors.TagAlreadyDeleted, WellKnownErrors.Messages.GetValueOrDefault(WellKnownErrors.TagAlreadyDeleted) ?? "Unknwon"));
+            result.AddError(new DomainError(WellKnownErrors.TagAlreadyDeleted, WellKnownErrors.Messages.GetValueOrDefault(WellKnownErrors.TagAlreadyDeleted) ?? "Unknwon"));
             return result;
         }
 

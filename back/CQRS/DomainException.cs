@@ -1,6 +1,6 @@
 ﻿namespace CQRS;
 
-public class DomainException(IEnumerable<Error>? errors) : Exception
+public class DomainException(IEnumerable<DomainError>? errors) : Exception
 {
-    public IEnumerable<Error> DomainErrors { get; } = errors ?? [];
+    public IEnumerable<DomainError> DomainErrors { get; } = errors ?? [];
 }

@@ -10,5 +10,5 @@ public class AggregateContext
 
     public List<object> GetEvents() => Result?.GetEvents().ToList() ?? [];
 
-    public List<Error> GetErrors() => Result?.GetErrors().ToList() ?? [];
+    public List<DomainError> GetErrors() => Result?.GetErrors().ToList() ?? [];
 }

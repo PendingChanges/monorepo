@@ -13,7 +13,7 @@ public abstract class SingleAggregateCommandHandler<TCommand, TAggregate>(IWrite
     {
         var command = request.Command;
 
-        var aggregate = await LoadAggregate(command, request.UserId, cancellationToken) ?? throw new DomainException([new Error("AGGREGATE_NOT_FOUND", "Aggregate not found")]);
+        var aggregate = await LoadAggregate(command, request.UserId, cancellationToken) ?? throw new DomainException([new DomainError("AGGREGATE_NOT_FOUND", "Aggregate not found")]);
         var aggregateResult = ExecuteCommand(aggregate, command, request.UserId);
 
         if (aggregateResult.HasErrors)

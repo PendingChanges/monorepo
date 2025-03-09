@@ -1,12 +1,17 @@
-﻿using BetterNote.Domain.Tags;
+﻿using BetterNote.Application.Tags;
+using BetterNote.Domain.Tags;
 using CQRS;
 
 namespace BetterNote.Tags.Commands.Handlers;
-internal class CreateTagHandler(IWriteEvents eventWriter, IReadAggregates aggregateReader) : SingleAggregateCommandHandler<CreateTag, Tag>(eventWriter, aggregateReader)
+internal class CreateTagHandler(IWriteEvents eventWriter, IReadAggregates aggregateReader, IReadTags tagReader) : SingleAggregateCommandHandler<CreateTag, Tag>(eventWriter, aggregateReader)
 {
-    protected override AggregateResult ExecuteCommand(Tag aggregate, CreateTag command, string ownerId) 
+    protected override AggregateResult ExecuteCommand(Tag aggregate, CreateTag command, string ownerId)
         => aggregate.CreateTag(command.Value);
 
-    protected override Task<Tag?> LoadAggregate(CreateTag command, string ownerId, CancellationToken cancellationToken)
-        => Task.FromResult<Tag?>(new Tag());
+    protected override async Task<Tag?> LoadAggregate(CreateTag command, string ownerId, CancellationToken cancellationToken)
+    {
+        var tags = await tagReader.GetAllTagAsync(cancellationToken);
+        var existingTagValues = tags.Select(x => x.Value).ToList();
+        return new Tag(existingTagValues);
+    }
 }
