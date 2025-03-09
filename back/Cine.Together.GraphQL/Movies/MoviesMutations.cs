@@ -1,5 +1,7 @@
 ﻿using CQRS;
+using HotChocolate;
 using HotChocolate.Authorization;
+using HotChocolate.Types;
 using MediatR;
 
 namespace Cine.Together.GraphQL.Movies;

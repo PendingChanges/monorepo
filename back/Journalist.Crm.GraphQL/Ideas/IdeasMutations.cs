@@ -1,7 +1,7 @@
 ﻿using CQRS;
+using HotChocolate;
 using HotChocolate.Authorization;
-using Journalist.Crm.CommandHandlers;
-using Journalist.Crm.Domain;
+using HotChocolate.Types;
 using Journalist.Crm.GraphQL.Ideas.Inputs;
 using Journalist.Crm.GraphQL.Ideas.Outputs;
 using MediatR;

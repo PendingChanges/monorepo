@@ -29,4 +29,5 @@ public abstract class SingleAggregateCommandHandler<TCommand, TAggregate>(IWrite
     protected abstract Task<TAggregate?> LoadAggregate(TCommand command, string ownerId, CancellationToken cancellationToken);
 
     protected abstract AggregateResult ExecuteCommand(TAggregate aggregate, TCommand command, string ownerId);
+
 }

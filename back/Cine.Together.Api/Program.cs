@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Serilog;
 using Serilog.Formatting.Compact;
 using CQRS;
+using Infrastructure.Api;
 
 namespace Cine.Together.Api;
 

@@ -1,12 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<ItemGroup>
-		<PackageReference Include="HotChocolate.AspNetCore" Version="15.0.3" />
-		<PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="15.0.3" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <ProjectReference Include="..\Cine.Together.Domain\Cine.Together.Domain.csproj" />
+	  <ProjectReference Include="..\Infractructure.GraphQL\Infractructure.GraphQL.csproj" />
 	</ItemGroup>
 
 </Project>

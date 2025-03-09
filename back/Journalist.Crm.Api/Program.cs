@@ -6,6 +6,8 @@ using Serilog;
 using Serilog.Formatting.Compact;
 using CQRS;
 using Cine.Together.Api.Infrastructure;
+using Infractructure.GraphQL;
+using Infrastructure.Api;
 
 namespace Journalist.Crm.Api;
 

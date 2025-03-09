@@ -1,12 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-	  <PackageReference Include="Marten" Version="7.37.3" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Cine.Together.Domain\Cine.Together.Domain.csproj" />
     <ProjectReference Include="..\CQRS\CQRS.csproj" />
+    <ProjectReference Include="..\Infrastructure.Marten\Infrastructure.Marten.csproj" />
   </ItemGroup>
 
 </Project>

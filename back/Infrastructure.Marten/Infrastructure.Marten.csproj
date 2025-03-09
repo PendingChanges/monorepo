@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<ItemGroup>
+		<PackageReference Include="Marten" Version="7.38.1" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.2" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\CQRS\CQRS.csproj" />
+	</ItemGroup>
+</Project>

@@ -4,6 +4,8 @@ using HotChocolate.Types.Pagination;
 using Journalist.Crm.Domain.Ideas;
 using Journalist.Crm.Domain.Ideas.DataModels;
 using CQRS;
+using HotChocolate.Types;
+using HotChocolate;
 
 namespace Journalist.Crm.GraphQL.Ideas;
 

@@ -6,6 +6,8 @@ using Journalist.Crm.GraphQL.Ideas;
 using Journalist.Crm.GraphQL.Pitches.Outputs;
 using Client = Journalist.Crm.GraphQL.Clients.Outputs.Client;
 using CQRS;
+using HotChocolate;
+using HotChocolate.Types;
 
 namespace Journalist.Crm.GraphQL.Pitches;
 

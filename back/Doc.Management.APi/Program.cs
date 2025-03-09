@@ -1,5 +1,4 @@
 using CQRS;
-using Doc.Management.Api;
 using Doc.Management.Api.Documents;
 using Doc.Management.Documents;
 using Doc.Management.GraphQL;
@@ -12,6 +11,7 @@ using Serilog;
 using Serilog.Formatting.Compact;
 using System.Text.Json.Serialization;
 using Cine.Together.Api.Infrastructure;
+using Infrastructure.Api;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console(new RenderedCompactJsonFormatter())

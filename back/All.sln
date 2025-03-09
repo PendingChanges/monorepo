@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote", "BetterNote.Domain\BetterNote.csproj", "{AACD3484-8A84-4051-B310-710E72D511E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote.Domain", "BetterNote.Domain\BetterNote.Domain.csproj", "{AACD3484-8A84-4051-B310-710E72D511E6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{74AEB3B3-8051-48A9-B0CB-63760B081D7C}"
 	ProjectSection(SolutionItems) = preProject
@@ -56,6 +56,24 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Common", "Domain.Common\Domain.Common.csproj", "{C70CD34A-6F27-414B-AEE9-EDBD36C6398E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Api", "Infrastructure.Api\Infrastructure.Api.csproj", "{005F2D0B-FFB7-4B12-A9BB-F828EED7DFBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote.Application", "BetterNote.Application\BetterNote.Application.csproj", "{B3C14CC9-2F74-4746-BA41-DA3144B3B26C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote.UnitTests", "BetterNote.UnitTests\BetterNote.UnitTests.csproj", "{B08EE020-8479-41BE-B562-AEB6FBEBEC75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F3F700D8-4C84-42ED-A36E-AA43B8476629}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Common", "Tests.Common\Tests.Common.csproj", "{3BBCF9E8-38E5-4557-84AD-CC6FB9E6DE0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote.Infrastructure.Marten", "BetterNote.Infrastructure.Marten\BetterNote.Infrastructure.Marten.csproj", "{AE73E83D-43EE-4ACF-B69E-9DD2557455D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Marten", "Infrastructure.Marten\Infrastructure.Marten.csproj", "{8D51EC30-98E7-4DB5-9410-CDBEA86BA5AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote.Infrastructure.GraphQL", "BetterNote.GraphQL\BetterNote.Infrastructure.GraphQL.csproj", "{D6983625-8BAC-4760-A076-75F9C35AC13C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infractructure.GraphQL", "Infractructure.GraphQL\Infractructure.GraphQL.csproj", "{8EFF63AD-D62D-4FB5-BE9D-01D5CBDBD5C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote.Api", "BetterNote.Api\BetterNote.Api.csproj", "{8B5AE709-B850-47EC-BC85-2FA3E8BEAC18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -155,13 +173,52 @@ Global
 		{005F2D0B-FFB7-4B12-A9BB-F828EED7DFBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{005F2D0B-FFB7-4B12-A9BB-F828EED7DFBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{005F2D0B-FFB7-4B12-A9BB-F828EED7DFBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3C14CC9-2F74-4746-BA41-DA3144B3B26C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3C14CC9-2F74-4746-BA41-DA3144B3B26C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3C14CC9-2F74-4746-BA41-DA3144B3B26C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3C14CC9-2F74-4746-BA41-DA3144B3B26C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B08EE020-8479-41BE-B562-AEB6FBEBEC75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B08EE020-8479-41BE-B562-AEB6FBEBEC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B08EE020-8479-41BE-B562-AEB6FBEBEC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B08EE020-8479-41BE-B562-AEB6FBEBEC75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBCF9E8-38E5-4557-84AD-CC6FB9E6DE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBCF9E8-38E5-4557-84AD-CC6FB9E6DE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBCF9E8-38E5-4557-84AD-CC6FB9E6DE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBCF9E8-38E5-4557-84AD-CC6FB9E6DE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE73E83D-43EE-4ACF-B69E-9DD2557455D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE73E83D-43EE-4ACF-B69E-9DD2557455D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE73E83D-43EE-4ACF-B69E-9DD2557455D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE73E83D-43EE-4ACF-B69E-9DD2557455D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D51EC30-98E7-4DB5-9410-CDBEA86BA5AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D51EC30-98E7-4DB5-9410-CDBEA86BA5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D51EC30-98E7-4DB5-9410-CDBEA86BA5AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D51EC30-98E7-4DB5-9410-CDBEA86BA5AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6983625-8BAC-4760-A076-75F9C35AC13C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6983625-8BAC-4760-A076-75F9C35AC13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6983625-8BAC-4760-A076-75F9C35AC13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6983625-8BAC-4760-A076-75F9C35AC13C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EFF63AD-D62D-4FB5-BE9D-01D5CBDBD5C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EFF63AD-D62D-4FB5-BE9D-01D5CBDBD5C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EFF63AD-D62D-4FB5-BE9D-01D5CBDBD5C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EFF63AD-D62D-4FB5-BE9D-01D5CBDBD5C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B5AE709-B850-47EC-BC85-2FA3E8BEAC18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B5AE709-B850-47EC-BC85-2FA3E8BEAC18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B5AE709-B850-47EC-BC85-2FA3E8BEAC18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B5AE709-B850-47EC-BC85-2FA3E8BEAC18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{8D424874-36C8-4630-97EE-F71FD2F5291C} = {F3F700D8-4C84-42ED-A36E-AA43B8476629}
+		{0147DEA5-7AAA-46F1-889A-7307CA36E0D2} = {F3F700D8-4C84-42ED-A36E-AA43B8476629}
+		{FC7FBD4E-7A50-411B-BA77-CBC8F66EB2CC} = {F3F700D8-4C84-42ED-A36E-AA43B8476629}
 		{42859E9F-D905-48B3-BE3E-43CD60B02DED} = {4F792734-88F0-48BB-87B0-F79FDDC28623}
 		{C70CD34A-6F27-414B-AEE9-EDBD36C6398E} = {4F792734-88F0-48BB-87B0-F79FDDC28623}
 		{005F2D0B-FFB7-4B12-A9BB-F828EED7DFBB} = {4F792734-88F0-48BB-87B0-F79FDDC28623}
+		{B08EE020-8479-41BE-B562-AEB6FBEBEC75} = {F3F700D8-4C84-42ED-A36E-AA43B8476629}
+		{3BBCF9E8-38E5-4557-84AD-CC6FB9E6DE0D} = {F3F700D8-4C84-42ED-A36E-AA43B8476629}
+		{8D51EC30-98E7-4DB5-9410-CDBEA86BA5AB} = {4F792734-88F0-48BB-87B0-F79FDDC28623}
+		{8EFF63AD-D62D-4FB5-BE9D-01D5CBDBD5C4} = {4F792734-88F0-48BB-87B0-F79FDDC28623}
 	EndGlobalSection
 EndGlobal

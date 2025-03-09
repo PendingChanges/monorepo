@@ -1,11 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-	  <PackageReference Include="Marten" Version="7.37.3" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Doc.Management\Doc.Management.csproj" />
+    <ProjectReference Include="..\Infrastructure.Marten\Infrastructure.Marten.csproj" />
   </ItemGroup>
 
 </Project>

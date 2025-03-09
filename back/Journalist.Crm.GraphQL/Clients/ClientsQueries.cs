@@ -5,6 +5,8 @@ using Journalist.Crm.Domain.Clients;
 using Journalist.Crm.Domain.Clients.DataModels;
 using Client = Journalist.Crm.GraphQL.Clients.Outputs.Client;
 using CQRS;
+using HotChocolate.Types;
+using HotChocolate;
 
 namespace Journalist.Crm.GraphQL.Clients;
 

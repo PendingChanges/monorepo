@@ -1,4 +1,4 @@
-﻿namespace BetterNote;
+﻿namespace BetterNote.Domain;
 public static class WellKnownErrors
 {
     public const string TagAlreadyDeleted = "TAG_ALREADY_DELETED";

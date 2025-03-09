@@ -1,5 +1,7 @@
 ﻿using Doc.Management.Documents;
 using Doc.Management.Documents.DataModels;
+using HotChocolate;
+using HotChocolate.Types;
 using HotChocolate.Types.Pagination;
 
 namespace Doc.Management.GraphQL.Documents;

@@ -1,2 +1,2 @@
-﻿namespace BetterNote.Tags.Events;
+﻿namespace BetterNote.Domain.Tags.Events;
 public record TagCreated(Guid Id, string Value);

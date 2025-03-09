@@ -1,6 +1,8 @@
 ﻿using Cine.Together.Domain.Movies;
 using CQRS;
+using HotChocolate;
 using HotChocolate.Authorization;
+using HotChocolate.Types;
 
 namespace Cine.Together.GraphQL.Movies;
 

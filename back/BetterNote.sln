@@ -3,12 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote", "BetterNote.Domain\BetterNote.csproj", "{AACD3484-8A84-4051-B310-710E72D511E6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{74AEB3B3-8051-48A9-B0CB-63760B081D7C}"
 	ProjectSection(SolutionItems) = preProject
 		Directory.Build.props = Directory.Build.props
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote.Application", "BetterNote.Application\BetterNote.Application.csproj", "{97E74474-18C6-4D8A-8B2D-57F38D499128}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote.Domain", "BetterNote.Domain\BetterNote.Domain.csproj", "{D0E68847-4465-4732-B64B-3C2A6617BDB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote.UnitTests", "BetterNote.UnitTests\BetterNote.UnitTests.csproj", "{CD2C06D8-F5C8-4EF1-854C-99AA4E7CCAE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS", "CQRS\CQRS.csproj", "{FAC45D46-CFA7-4CF1-A4DA-9B08EBDD4C61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Common", "Domain.Common\Domain.Common.csproj", "{61F4C569-961A-400A-B41A-2962C19BA8FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{4EAB783B-5388-4703-BAD7-DECE221B7D41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,12 +26,32 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AACD3484-8A84-4051-B310-710E72D511E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AACD3484-8A84-4051-B310-710E72D511E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AACD3484-8A84-4051-B310-710E72D511E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AACD3484-8A84-4051-B310-710E72D511E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97E74474-18C6-4D8A-8B2D-57F38D499128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97E74474-18C6-4D8A-8B2D-57F38D499128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97E74474-18C6-4D8A-8B2D-57F38D499128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97E74474-18C6-4D8A-8B2D-57F38D499128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0E68847-4465-4732-B64B-3C2A6617BDB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E68847-4465-4732-B64B-3C2A6617BDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E68847-4465-4732-B64B-3C2A6617BDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E68847-4465-4732-B64B-3C2A6617BDB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2C06D8-F5C8-4EF1-854C-99AA4E7CCAE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2C06D8-F5C8-4EF1-854C-99AA4E7CCAE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2C06D8-F5C8-4EF1-854C-99AA4E7CCAE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2C06D8-F5C8-4EF1-854C-99AA4E7CCAE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC45D46-CFA7-4CF1-A4DA-9B08EBDD4C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC45D46-CFA7-4CF1-A4DA-9B08EBDD4C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC45D46-CFA7-4CF1-A4DA-9B08EBDD4C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC45D46-CFA7-4CF1-A4DA-9B08EBDD4C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F4C569-961A-400A-B41A-2962C19BA8FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F4C569-961A-400A-B41A-2962C19BA8FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F4C569-961A-400A-B41A-2962C19BA8FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F4C569-961A-400A-B41A-2962C19BA8FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FAC45D46-CFA7-4CF1-A4DA-9B08EBDD4C61} = {4EAB783B-5388-4703-BAD7-DECE221B7D41}
+		{61F4C569-961A-400A-B41A-2962C19BA8FF} = {4EAB783B-5388-4703-BAD7-DECE221B7D41}
 	EndGlobalSection
 EndGlobal

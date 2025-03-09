@@ -2,9 +2,6 @@
 	<PropertyGroup>
 		<IsPackable>false</IsPackable>
 	</PropertyGroup>
-	<ItemGroup>
-	  <SpecFlowObsoleteCodeBehindFiles Remove="Domain\Ideas\Client.feature.cs" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="AutoFixture.Xunit2" Version="4.18.1" />

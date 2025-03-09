@@ -5,6 +5,8 @@ using Journalist.Crm.Domain.Pitches;
 using Journalist.Crm.Domain.Pitches.DataModels;
 using Pitch = Journalist.Crm.GraphQL.Pitches.Outputs.Pitch;
 using CQRS;
+using HotChocolate.Types;
+using HotChocolate;
 
 namespace Journalist.Crm.GraphQL.Pitches;
 
