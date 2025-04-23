@@ -11,7 +11,7 @@ public sealed class Tag : Aggregate
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public Tag(IReadOnlyCollection<string>? existingTagValues = null)
     {
-        _existingTagValues = existingTagValues ?? new List<string>();
+        _existingTagValues = existingTagValues ?? [];
     }
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public AggregateResult CreateTag(string value)
@@ -54,7 +54,7 @@ public sealed class Tag : Aggregate
 
     private void Apply(TagCreated @event)
     {
-        SetId(@event.Id);
+        SetId(@event.TagId);
 
         Value = @event.Value;
 

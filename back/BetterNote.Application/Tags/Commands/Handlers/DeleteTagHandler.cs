@@ -1,7 +1,8 @@
-﻿using BetterNote.Domain.Tags;
+﻿using BetterNote.Application.Tags.Commands;
+using BetterNote.Domain.Tags;
 using CQRS;
 
-namespace BetterNote.Tags.Commands.Handlers;
+namespace BetterNote.Application.Tags.Commands.Handlers;
 internal class DeleteTagHandler(IWriteEvents eventWriter, IReadAggregates aggregateReader) : SingleAggregateCommandHandler<DeleteTag, Tag>(eventWriter, aggregateReader)
 {
     protected override AggregateResult ExecuteCommand(Tag aggregate, DeleteTag command, string ownerId)

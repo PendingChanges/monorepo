@@ -1,4 +1,4 @@
-﻿using BetterNote.Tags.Commands.Handlers;
+﻿using BetterNote.Application.Tags.Commands.Handlers;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BetterNote.Application;

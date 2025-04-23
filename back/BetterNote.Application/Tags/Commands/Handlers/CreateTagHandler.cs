@@ -2,7 +2,7 @@
 using BetterNote.Domain.Tags;
 using CQRS;
 
-namespace BetterNote.Tags.Commands.Handlers;
+namespace BetterNote.Application.Tags.Commands.Handlers;
 internal class CreateTagHandler(IWriteEvents eventWriter, IReadAggregates aggregateReader, IReadTags tagReader) : SingleAggregateCommandHandler<CreateTag, Tag>(eventWriter, aggregateReader)
 {
     protected override AggregateResult ExecuteCommand(Tag aggregate, CreateTag command, string ownerId)

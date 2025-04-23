@@ -38,7 +38,7 @@ public class TagStepDefinitions(AggregateContext aggregateContext)
         var @event = events.LastOrDefault() as TagCreated;
         Assert.NotNull(@event);
         Assert.Equal(pouet, @event.Value);
-        Assert.Equal(tag.Id, @event.Id);
+        Assert.Equal(tag.Id, @event.TagId);
     }
 
     [Given("A tag with value {string}")]

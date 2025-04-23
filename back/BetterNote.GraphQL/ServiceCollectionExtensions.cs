@@ -3,7 +3,7 @@ using BetterNote.Infrastructure.GraphQL.Tags;
 using Infractructure.GraphQL;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Cine.Together.GraphQL;
+namespace BetterNote.Infrastructure.GraphQL;
 
 public static class ServiceCollectionExtensions
 {

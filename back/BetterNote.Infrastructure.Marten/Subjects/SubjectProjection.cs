@@ -6,5 +6,5 @@ namespace BetterNote.Infrastructure.Marten.Subjects;
 public class SubjectProjection : EventProjection
 {
     public SubjectDocument Create(SubjectCreated subjectCreated)
-        => new(subjectCreated.Id, subjectCreated.Title, subjectCreated.Description);
+        => new(subjectCreated.SubjectId, subjectCreated.Title, subjectCreated.Description);
 }

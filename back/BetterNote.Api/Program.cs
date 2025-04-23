@@ -6,9 +6,9 @@ using Microsoft.Extensions.Options;
 using Serilog;
 using Serilog.Formatting.Compact;
 using System.Text.Json.Serialization;
-using Cine.Together.GraphQL;
 using Cine.Together.Api.Infrastructure;
 using Infrastructure.Api;
+using BetterNote.Infrastructure.GraphQL;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console(new RenderedCompactJsonFormatter())

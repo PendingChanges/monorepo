@@ -19,7 +19,7 @@ public class SubjectMutations
     CreateSubjectInput input
     )
     {
-        var createTag = new WrappedCommand<CreateSubject, Subject>(new CreateSubject(input.Title, input.Description, input.TagsId ?? new List<Guid>()), context.UserId);
+        var createTag = new WrappedCommand<CreateSubject, Subject>(new CreateSubject(input.Title, input.Description, input.TagsId ?? []), context.UserId);
         var aggregate = await sender.Send(createTag);
 
         return new SubjectCreatedPayload(aggregate.Id);

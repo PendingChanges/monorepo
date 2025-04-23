@@ -27,7 +27,7 @@ internal class Person : Aggregate
 
     private void Apply(PersonCreated @event)
     {
-        SetId(@event.Id);
+        SetId(@event.PersonId);
 
         FirstName = @event.FirstName;
         LastName = @event.LastName;

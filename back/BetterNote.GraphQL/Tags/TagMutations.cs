@@ -1,6 +1,6 @@
-﻿using BetterNote.Infrastructure.GraphQL.Tags.Inputs;
+﻿using BetterNote.Application.Tags.Commands;
+using BetterNote.Infrastructure.GraphQL.Tags.Inputs;
 using BetterNote.Infrastructure.GraphQL.Tags.Payloads;
-using BetterNote.Tags.Commands;
 using CQRS;
 using HotChocolate;
 using HotChocolate.Types;

@@ -12,27 +12,40 @@ public sealed class Subject: Aggregate
 
     public string Title { get; private set; }
     public string Description { get; private set; }
-    public IReadOnlyCollection<Guid> TagsId { get; private set; }
+    public IReadOnlyCollection<Guid> TagsId { get; private set; } = [];
 
     public AggregateResult CreateSubject(string Title, string Description, IReadOnlyCollection<Guid> tagsId)
     {
         var result = AggregateResult.Create();
         var id = Guid.NewGuid();
-        var @event = new SubjectCreated(id, Title, Description, tagsId);
+        var @event = new SubjectCreated(id, Title, Description);
        
         Apply(@event);
         result.AddEvent(@event);
+
+        foreach (var tagId in tagsId)
+        {
+            var tagEvent = new TagAddedToSubject(id, tagId);
+            Apply(tagEvent);
+            result.AddEvent(tagEvent);
+        }
+
         return result;
     }
 
     private void Apply(SubjectCreated @event)
     {
-        SetId(@event.Id);
+        SetId(@event.SubjectId);
 
         Title = @event.Title;
         Description = @event.Description;
-        TagsId = @event.TagsId;
 
+        IncrementVersion();
+    }
+
+    private void Apply(TagAddedToSubject @event)
+    {
+        TagsId = [.. TagsId, @event.TagId];
         IncrementVersion();
     }
 }
