@@ -9,7 +9,7 @@ using MediatR;
 namespace BetterNote.Infrastructure.GraphQL.Tags;
 
 [ExtendObjectType("Mutation")]
-public class TagMutations
+public sealed class TagMutations
 {
     [GraphQLName("createTag")]
     public async Task<TagCreatedPayload> CreateTagAsync(

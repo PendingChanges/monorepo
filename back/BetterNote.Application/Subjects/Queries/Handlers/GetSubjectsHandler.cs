@@ -1,7 +1,7 @@
 ﻿using MediatR;
 
 namespace BetterNote.Application.Subjects.Queries.Handlers;
-internal class GetSubjectsHandler(IReadSubjects subjectReader) : IRequestHandler<GetSubjects, SubjectResultSet>
+internal sealed class GetSubjectsHandler(IReadSubjects subjectReader) : IRequestHandler<GetSubjects, SubjectResultSet>
 {
     public Task<SubjectResultSet> Handle(GetSubjects query, CancellationToken cancellationToken)
     {

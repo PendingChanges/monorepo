@@ -2,4 +2,4 @@
 
 namespace BetterNote.Application.Tags.Commands;
 
-public record DeleteTag(Guid Id) : ICommand;
+public sealed record DeleteTag(Guid Id) : ICommand;

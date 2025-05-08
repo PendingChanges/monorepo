@@ -3,7 +3,7 @@ using Marten;
 using Marten.Pagination;
 
 namespace BetterNote.Infrastructure.Marten.Subjects;
-public class SubjectRepository(IQuerySession session) : IReadSubjects
+public sealed class SubjectRepository(IQuerySession session) : IReadSubjects
 {
     public async Task<SubjectResultSet> GetSubjectsAsync(GetSubjectsRequest request, CancellationToken cancellationToken = default)
     {

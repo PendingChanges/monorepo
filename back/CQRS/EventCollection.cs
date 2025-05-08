@@ -1,6 +1,6 @@
 ﻿namespace CQRS;
 
-public class EventCollection
+public sealed class EventCollection
 {
     private readonly List<object> _events = [];
 

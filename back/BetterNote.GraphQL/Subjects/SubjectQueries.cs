@@ -7,7 +7,7 @@ using MediatR;
 namespace BetterNote.Infrastructure.GraphQL.Subjects;
 
 [ExtendObjectType("Query")]
-public class SubjectQueries
+public sealed class SubjectQueries
 {
     [GraphQLName("allSubjects")]
     [UseOffsetPaging(IncludeTotalCount = true)]

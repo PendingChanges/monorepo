@@ -2,18 +2,14 @@
 using CQRS;
 
 namespace BetterNote.Domain.Tags;
-public sealed class Tag : Aggregate
+public sealed class Tag(IReadOnlyCollection<string>? existingTagValues = null) : Aggregate
 {
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
     public string Value { get; set; }
     public bool Deleted { get; set; }
-    readonly IReadOnlyCollection<string> _existingTagValues;
+    readonly IReadOnlyCollection<string> _existingTagValues = existingTagValues ?? [];
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
 
-#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-    public Tag(IReadOnlyCollection<string>? existingTagValues = null)
-    {
-        _existingTagValues = existingTagValues ?? [];
-    }
-#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
     public AggregateResult CreateTag(string value)
     {
         var result = AggregateResult.Create();

@@ -2,7 +2,7 @@
 using CQRS;
 
 namespace BetterNote.Application.Subjects.Commands.Handlers;
-internal class CreateSubjectHandler(IWriteEvents eventWriter, IReadAggregates aggregateReader) : SingleAggregateCommandHandler<CreateSubject, Subject>(eventWriter, aggregateReader)
+internal sealed class CreateSubjectHandler(IWriteEvents eventWriter, IReadAggregates aggregateReader) : SingleAggregateCommandHandler<CreateSubject, Subject>(eventWriter, aggregateReader)
 {
     protected override AggregateResult ExecuteCommand(Subject aggregate, CreateSubject command, string ownerId)
         => aggregate.CreateSubject(command.Title, command.Description, command.TagsId);

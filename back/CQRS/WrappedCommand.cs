@@ -2,7 +2,7 @@
 
 namespace CQRS;
 
-public class WrappedCommand<TCommand, TAggregate>(TCommand command, string userId) : IRequest<TAggregate>
+public sealed class WrappedCommand<TCommand, TAggregate>(TCommand command, string userId) : IRequest<TAggregate>
     where TCommand : ICommand
     where TAggregate : Aggregate
 {

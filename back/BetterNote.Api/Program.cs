@@ -17,7 +17,7 @@ Log.Logger = new LoggerConfiguration()
 try
 {
     Log.Information("Starting web application");
-    var MyAllowSpecificOrigins = "LocalOnly";
+    const string MyAllowSpecificOrigins = "LocalOnly";
 
     var builder = WebApplication.CreateBuilder(args);
     var configuration = builder.Configuration;

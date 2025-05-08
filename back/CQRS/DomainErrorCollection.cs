@@ -1,6 +1,6 @@
 ﻿namespace CQRS;
 
-public class DomainErrorCollection
+public sealed class DomainErrorCollection
 {
     private readonly List<DomainError> _errors = [];
 

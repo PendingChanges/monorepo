@@ -1,2 +1,2 @@
 ﻿namespace BetterNote.Infrastructure.GraphQL.Subjects.Payloads;
-public record SubjectCreatedPayload(Guid Id);
+public sealed record SubjectCreatedPayload(Guid Id);

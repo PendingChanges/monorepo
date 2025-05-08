@@ -3,7 +3,7 @@ using BetterNote.Domain.Subjects.Events;
 using CQRS;
 
 namespace BetterNote.Domain.Persons;
-internal class Person : Aggregate
+internal sealed class Person : Aggregate
 {
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
     public Person()

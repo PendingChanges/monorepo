@@ -1,6 +1,6 @@
 ﻿namespace CQRS;
 
-public class AggregateResult
+public sealed class AggregateResult
 {
     private AggregateResult()
     {

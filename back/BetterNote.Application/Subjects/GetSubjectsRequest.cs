@@ -1,12 +1,12 @@
 ﻿using Domain.Common;
 
 namespace BetterNote.Application.Subjects;
-public record GetSubjectsRequest(
+public sealed record GetSubjectsRequest(
     int? skip,
     int? take,
-    string? sortBy,
-    string? sortDirection) : PaginatedRequestBase(
+    string? SortBy,
+    string? SortDirection) : PaginatedRequestBase(
         skip ?? Constants.DefaultPageNumber,
         take ?? Constants.DefaultPageSize,
-        sortBy ?? Constants.DefaultSubjectSortBy,
-        sortDirection ?? Constants.DefaultSortDirection);
+        SortBy ?? Constants.DefaultSubjectSortBy,
+        SortDirection ?? Constants.DefaultSortDirection);

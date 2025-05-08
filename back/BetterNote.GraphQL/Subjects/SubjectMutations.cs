@@ -10,7 +10,7 @@ using MediatR;
 namespace BetterNote.Infrastructure.GraphQL.Subjects;
 
 [ExtendObjectType("Mutation")]
-public class SubjectMutations
+public sealed class SubjectMutations
 {
     [GraphQLName("createSubject")]
     public async Task<SubjectCreatedPayload> CreateSubjectAsync(

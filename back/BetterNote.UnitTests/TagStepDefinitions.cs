@@ -8,7 +8,7 @@ using Xunit;
 namespace BetterNote.UnitTests;
 
 [Binding]
-public class TagStepDefinitions(AggregateContext aggregateContext)
+public sealed class TagStepDefinitions(AggregateContext aggregateContext)
 {
     private readonly AggregateContext _aggregateContext = aggregateContext;
 

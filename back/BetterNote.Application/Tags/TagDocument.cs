@@ -1,2 +1,2 @@
 ﻿namespace BetterNote.Application.Tags;
-public record TagDocument(Guid Id, string Value);
+public sealed record TagDocument(Guid Id, string Value);
