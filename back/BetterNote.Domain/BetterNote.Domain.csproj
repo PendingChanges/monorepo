@@ -6,4 +6,7 @@
   <ItemGroup>
     <Folder Include="Teams\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Creedengo" Version="2.1.0" />
+  </ItemGroup>
 </Project>
