@@ -9,7 +9,7 @@ namespace BetterNote.Infrastructure.GraphQL.Tags;
 public class TagQueries
 {
 
-    public async Task<IReadOnlyList<TagModel>> GetAllTagsAsync(
+    public async Task<IEnumerable<TagModel>> GetAllTagsAsync(
         [Service] ISender sender, 
         CancellationToken cancellationToken = default)
         => (await sender.Send(new GetAllTags(), cancellationToken)).MapToTagModels();

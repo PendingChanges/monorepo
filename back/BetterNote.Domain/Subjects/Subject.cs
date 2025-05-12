@@ -25,7 +25,7 @@ public sealed class Subject: Aggregate
 
         foreach (var tagId in tagsId)
         {
-            var tagEvent = new TagAddedToSubject(id, tagId);
+            var tagEvent = new SubjectTagged(id, tagId);
             Apply(tagEvent);
             result.AddEvent(tagEvent);
         }
@@ -35,7 +35,7 @@ public sealed class Subject: Aggregate
 
     private void Apply(SubjectCreated @event)
     {
-        SetId(@event.SubjectId);
+        SetId(@event.Id);
 
         Title = @event.Title;
         Description = @event.Description;
@@ -43,7 +43,7 @@ public sealed class Subject: Aggregate
         IncrementVersion();
     }
 
-    private void Apply(TagAddedToSubject @event)
+    private void Apply(SubjectTagged @event)
     {
         TagsId = [.. TagsId, @event.TagId];
         IncrementVersion();

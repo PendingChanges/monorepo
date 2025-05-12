@@ -1,3 +1,3 @@
 ﻿namespace BetterNote.Domain.Subjects.Events;
 
-public sealed record SubjectCreated(Guid SubjectId, string Title, string Description);
+public sealed record SubjectCreated(Guid Id, string Title, string Description);

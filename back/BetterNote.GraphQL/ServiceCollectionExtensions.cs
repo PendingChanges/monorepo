@@ -1,5 +1,6 @@
 ﻿using BetterNote.Infrastructure.GraphQL.Subjects;
 using BetterNote.Infrastructure.GraphQL.Tags;
+using BetterNote.Infrastructure.Marten.Tags;
 using Infractructure.GraphQL;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,6 +19,8 @@ public static class ServiceCollectionExtensions
                 .AddMutationType(m => m.Name("Mutation"))
                     .AddType<TagMutations>()
                     .AddType<SubjectMutations>()
+                .AddTypeExtension<SubjectExtensions>()
+                .AddDataLoader<TagsBySubjectIdDataLoader>()
                     ;
         });
 

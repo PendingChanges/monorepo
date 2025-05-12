@@ -1,0 +1,20 @@
+meta {
+  name: All Tags
+  type: graphql
+  seq: 3
+}
+
+post {
+  url: {{host}}
+  body: graphql
+  auth: inherit
+}
+
+body:graphql {
+  query{
+    allTags{
+      id
+      value
+    }
+  }
+}

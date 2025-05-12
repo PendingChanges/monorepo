@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote.Infrastructure.G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BetterNote.Infrastructure.Marten", "BetterNote.Infrastructure.Marten\BetterNote.Infrastructure.Marten.csproj", "{0C83924B-AEB7-4051-A403-FB8DAD1AF0D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailTest", "EmailTest\EmailTest.csproj", "{D555C6E0-CBB0-4E9B-A64B-512491DB8928}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +66,10 @@ Global
 		{0C83924B-AEB7-4051-A403-FB8DAD1AF0D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C83924B-AEB7-4051-A403-FB8DAD1AF0D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C83924B-AEB7-4051-A403-FB8DAD1AF0D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D555C6E0-CBB0-4E9B-A64B-512491DB8928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D555C6E0-CBB0-4E9B-A64B-512491DB8928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D555C6E0-CBB0-4E9B-A64B-512491DB8928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D555C6E0-CBB0-4E9B-A64B-512491DB8928}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

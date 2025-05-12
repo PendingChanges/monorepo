@@ -10,5 +10,8 @@ public class TagProjection : EventProjection
         => new(tagCreated.TagId, tagCreated.Value);
 
     public void Project(TagDeleted @event, IDocumentOperations ops)
-     => ops.Delete<TagDocument>(@event.TagId);
+    {
+        ops.Delete<TagDocument>(@event.TagId);
+        ops.DeleteWhere<TaggingDocument>(t => t.TagId == @event.TagId);
+    }
 }

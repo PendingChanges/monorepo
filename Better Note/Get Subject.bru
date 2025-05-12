@@ -1,0 +1,27 @@
+meta {
+  name: Get Subject
+  type: graphql
+  seq: 2
+}
+
+post {
+  url: {{host}}
+  body: graphql
+  auth: inherit
+}
+
+body:graphql {
+  query {
+    allSubjects {
+      items {
+        title
+        description
+        tags {
+          id
+          value
+        }
+      }
+    }
+  }
+  
+}

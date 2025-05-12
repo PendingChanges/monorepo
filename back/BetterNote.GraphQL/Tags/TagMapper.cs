@@ -7,5 +7,5 @@ internal static class TagMapper
 
     public static TagModel MapToTagModel(this TagDocument tagDocument) => new(tagDocument.Id, tagDocument.Value);
 
-    public static IReadOnlyList<TagModel> MapToTagModels(this IReadOnlyCollection<TagDocument> tagDocuments) => tagDocuments.Select(MapToTagModel).ToList();
+    public static IEnumerable<TagModel> MapToTagModels(this IEnumerable<TagDocument> tagDocuments) => tagDocuments.Select(MapToTagModel);
 }
