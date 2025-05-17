@@ -1,7 +1,7 @@
 meta {
   name: Get Subject
   type: graphql
-  seq: 2
+  seq: 6
 }
 
 post {
@@ -12,14 +12,13 @@ post {
 
 body:graphql {
   query {
-    allSubjects {
-      items {
-        title
-        description
-        tags {
-          id
-          value
-        }
+    subject(id: "726be928-e74c-4640-9d0c-076c54b59ec8") {
+      id
+      title
+      description
+      tags {
+        id
+        value
       }
     }
   }

@@ -33,6 +33,18 @@ public sealed class Subject: Aggregate
         return result;
     }
 
+    public AggregateResult Tag(Guid tagId)
+    {
+        var result = AggregateResult.Create();
+
+        var @event = new SubjectTagged(Id, tagId);
+        result.AddEvent(@event);
+
+        Apply(@event);
+
+        return result;
+    }
+
     private void Apply(SubjectCreated @event)
     {
         SetId(@event.Id);

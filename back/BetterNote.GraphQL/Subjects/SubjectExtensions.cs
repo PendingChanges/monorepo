@@ -11,12 +11,12 @@ namespace BetterNote.Infrastructure.GraphQL.Subjects;
 public class SubjectExtensions
 {
     public async Task<IEnumerable<TagModel>> GetTagsAsync(
-        [Parent] SubjectModel pitch,
+        [Parent] SubjectModel subject,
         [Service] TagsBySubjectIdDataLoader tagsBySubjectIdDataLoader,
         [Service] IContext context,
         CancellationToken cancellationToken = default)
     {
-        var tags = await tagsBySubjectIdDataLoader.LoadAsync(pitch.Id, cancellationToken);
+        var tags = await tagsBySubjectIdDataLoader.LoadAsync(subject.Id, cancellationToken);
 
         return (tags ?? []).MapToTagModels();
     }

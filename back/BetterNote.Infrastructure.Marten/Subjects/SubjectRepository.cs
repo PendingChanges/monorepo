@@ -27,4 +27,7 @@ public sealed class SubjectRepository(IQuerySession session) : IReadSubjects
             _ => query.OrderBy(c => c.Title)
         },
     };
+
+    public Task<SubjectDocument?> GetSubjectAsync(Guid id, CancellationToken cancellationToken) => session.Query<SubjectDocument>()
+            .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
 }

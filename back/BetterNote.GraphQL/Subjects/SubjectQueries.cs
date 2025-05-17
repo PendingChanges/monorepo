@@ -24,4 +24,14 @@ public sealed class SubjectQueries
         var pageInfo = new CollectionSegmentInfo(result.HasNextPage, result.HasPreviousPage);
         return new CollectionSegment<SubjectModel>(result.Data.MapToSubjectModels(), pageInfo, result.TotalItemCount);
     }
+
+    public async Task<SubjectModel?> GetSubjectAsync(
+        [Service] ISender sender,
+        Guid id,
+        CancellationToken cancellationToken = default)
+    {
+        var query = new GetSubjectById(id);
+        var result = await sender.Send(query, cancellationToken);
+        return result.MapToSubjectModelOrNull();
+    }
 }
