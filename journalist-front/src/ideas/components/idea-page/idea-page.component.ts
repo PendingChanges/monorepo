@@ -7,7 +7,7 @@ import { PitchesService } from 'src/pitches/services/PitchesService';
 import { PitchListComponent } from '../../../pitches/components/pitch-list/pitch-list.component';
 import { IdeaActionMenuComponent } from '../idea-action-menu/idea-action-menu.component';
 import { TranslocoModule } from '@ngneat/transloco';
-import { NgIf, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { IdeasActions } from 'src/ideas/state/ideas.actions';
 import {
@@ -20,12 +20,11 @@ import {
     templateUrl: './idea-page.component.html',
     styleUrls: ['./idea-page.component.scss'],
     imports: [
-        NgIf,
-        TranslocoModule,
-        IdeaActionMenuComponent,
-        PitchListComponent,
-        AsyncPipe,
-    ]
+    TranslocoModule,
+    IdeaActionMenuComponent,
+    PitchListComponent,
+    AsyncPipe
+]
 })
 export class IdeaPageComponent {
   constructor(private _route: ActivatedRoute, private _store: Store) {}

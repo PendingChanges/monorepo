@@ -1,13 +1,15 @@
-<ng-container *ngIf="languages">
+@if (languages) {
   <ul class="navbar-nav flex-row d-none d-md-flex align-items-center">
-    <li *ngFor="let language of languages">
-      <button
-        class="btn language"
-        (click)="onLanguageClick(language)"
-        [ngClass]="{ bold: language == currentLanguage }"
-      >
-        {{ language }}
-      </button>
-    </li>
+    @for (language of languages; track language) {
+      <li>
+        <button
+          class="btn language"
+          (click)="onLanguageClick(language)"
+          [ngClass]="{ bold: language == currentLanguage }"
+          >
+          {{ language }}
+        </button>
+      </li>
+    }
   </ul>
-</ng-container>
+}

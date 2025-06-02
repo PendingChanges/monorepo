@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import {
   NgbDropdown,
   NgbDropdownItem,
@@ -13,13 +13,12 @@ import { KeycloakProfile } from 'keycloak-js';
 @Component({
     selector: 'app-profile',
     imports: [
-        CommonModule,
-        NgbDropdown,
-        NgbDropdownMenu,
-        NgbDropdownToggle,
-        NgbDropdownItem,
-        TranslocoModule,
-    ],
+    NgbDropdown,
+    NgbDropdownMenu,
+    NgbDropdownToggle,
+    NgbDropdownItem,
+    TranslocoModule
+],
     templateUrl: './profile.component.html',
     styleUrls: ['./profile.component.scss']
 })

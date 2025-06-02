@@ -5,10 +5,11 @@
   [infiniteScrollDistance]="2"
   [infiniteScrollThrottle]="150"
   (scrolled)="onScroll()"
->
-  <app-pitch-list-item
-    *ngFor="let pitch of pitches$ | async"
-    [pitch]="pitch"
-  ></app-pitch-list-item>
+  >
+  @for (pitch of pitches$ | async; track pitch) {
+    <app-pitch-list-item
+      [pitch]="pitch"
+    ></app-pitch-list-item>
+  }
   <app-loading-row [loading]="loading$ | async"></app-loading-row>
 </div>

@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Idea, QueryAllIdeasArgs } from 'src/models/generated/graphql';
-import { NgFor, DecimalPipe, AsyncPipe, NgIf } from '@angular/common';
+import { DecimalPipe, AsyncPipe } from '@angular/common';
 import { TranslocoModule } from '@ngneat/transloco';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Observable } from 'rxjs';
@@ -16,14 +16,12 @@ import { LoadingRowComponent } from 'src/common/components/loading-row/loading-r
     templateUrl: './idea-list.component.html',
     styleUrls: ['./idea-list.component.scss'],
     imports: [
-        InfiniteScrollModule,
-        NgFor,
-        NgIf,
-        DecimalPipe,
-        IdeaListItemComponent,
-        AsyncPipe,
-        LoadingRowComponent
-    ]
+    InfiniteScrollModule,
+    DecimalPipe,
+    IdeaListItemComponent,
+    AsyncPipe,
+    LoadingRowComponent
+]
 })
 export class IdeaListComponent {
   public ideas$: Observable<readonly Idea[]> = this._store.select(selectIdeas);

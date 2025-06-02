@@ -1,4 +1,4 @@
-<ng-container *ngIf="pitch$ | async; let pitch">
+@if (pitch$ | async; as pitch) {
   <div class="container" *transloco="let t">
     <div class="row">
       <div class="col">
@@ -39,4 +39,4 @@
       </div>
     </div>
   </div>
-</ng-container>
+}

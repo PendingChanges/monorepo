@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 
 @Component({
     selector: 'app-loading-row',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './loading-row.component.html',
     styleUrls: ['./loading-row.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

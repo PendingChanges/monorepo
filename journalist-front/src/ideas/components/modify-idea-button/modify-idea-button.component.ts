@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Idea } from 'src/models/generated/graphql';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {
@@ -10,7 +10,7 @@ import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
     selector: 'app-modify-idea-button',
-    imports: [CommonModule, TranslocoModule],
+    imports: [TranslocoModule],
     templateUrl: './modify-idea-button.component.html',
     styleUrls: ['./modify-idea-button.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

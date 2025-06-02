@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { DeletePitchInput, Pitch } from 'src/models/generated/graphql';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Store } from '@ngrx/store';
@@ -12,7 +12,7 @@ import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
     selector: 'app-delete-pitch-button',
-    imports: [CommonModule, TranslocoModule],
+    imports: [TranslocoModule],
     templateUrl: './delete-pitch-button.component.html',
     styleUrls: ['./delete-pitch-button.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Client, QueryAllClientsArgs } from 'src/models/generated/graphql';
-import { NgFor, DecimalPipe, AsyncPipe, NgIf } from '@angular/common';
+import { DecimalPipe, AsyncPipe } from '@angular/common';
 import { TranslocoModule } from '@ngneat/transloco';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Store } from '@ngrx/store';
@@ -16,15 +16,13 @@ import { LoadingRowComponent } from 'src/common/components/loading-row/loading-r
     templateUrl: './client-list.component.html',
     styleUrls: ['./client-list.component.scss'],
     imports: [
-        TranslocoModule,
-        InfiniteScrollModule,
-        AsyncPipe,
-        NgFor,
-        DecimalPipe,
-        ClientListItemComponent,
-        LoadingRowComponent,
-        NgIf,
-    ]
+    TranslocoModule,
+    InfiniteScrollModule,
+    AsyncPipe,
+    DecimalPipe,
+    ClientListItemComponent,
+    LoadingRowComponent
+]
 })
 export class ClientListComponent {
   public clients$: Observable<readonly Client[]> =

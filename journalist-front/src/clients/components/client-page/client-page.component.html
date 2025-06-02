@@ -1,11 +1,11 @@
-<ng-container *ngIf="client$ | async; let client">
+@if (client$ | async; as client) {
   <div class="container" *transloco="let t">
     <div class="row justify-content-between">
       <div class="col">
         <h1>{{ t("clients.title") }} - {{ client.name }}</h1>
       </div>
     </div>
-    <ng-container *ngIf="pitches$ | async; let pitches">
+    @if (pitches$ | async; as pitches) {
       <app-client-action-menu
         [client]="client"
         [disableDeleteButton]="pitches.length > 0"
@@ -15,6 +15,6 @@
         [showIdea]="true"
         [clientId]="this.client.id"
       ></app-pitch-list>
-    </ng-container>
+    }
   </div>
-</ng-container>
+}

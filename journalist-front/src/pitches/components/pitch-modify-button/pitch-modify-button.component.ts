@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Pitch } from 'src/models/generated/graphql';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {
@@ -10,7 +10,7 @@ import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
     selector: 'app-pitch-modify-button',
-    imports: [CommonModule, TranslocoModule],
+    imports: [TranslocoModule],
     templateUrl: './pitch-modify-button.component.html',
     styleUrls: ['./pitch-modify-button.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

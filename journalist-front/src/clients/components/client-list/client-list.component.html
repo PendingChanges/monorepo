@@ -5,10 +5,11 @@
   [infiniteScrollDistance]="2"
   [infiniteScrollThrottle]="150"
   (scrolled)="onScroll()"
->
-  <app-client-list-item
-    *ngFor="let client of clients$ | async"
-    [client]="client"
-  ></app-client-list-item>
+  >
+  @for (client of clients$ | async; track client) {
+    <app-client-list-item
+      [client]="client"
+    ></app-client-list-item>
+  }
   <app-loading-row [loading]="loading$ | async"></app-loading-row>
 </div>

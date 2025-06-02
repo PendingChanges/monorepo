@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Pitch } from 'src/models/generated/graphql';
 import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-pitch-list-item',
-    imports: [CommonModule],
+    imports: [],
     templateUrl: './pitch-list-item.component.html',
     styleUrls: ['./pitch-list-item.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

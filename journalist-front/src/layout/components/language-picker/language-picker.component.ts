@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { AvailableLangs, TranslocoService } from '@ngneat/transloco';
-import { NgIf, NgFor, NgClass } from '@angular/common';
+import { NgClass } from '@angular/common';
 
 @Component({
     selector: 'app-language-picker',
     templateUrl: './language-picker.component.html',
     styleUrls: ['./language-picker.component.scss'],
-    imports: [NgIf, NgFor, NgClass]
+    imports: [NgClass]
 })
 export class LanguagePickerComponent implements OnInit {
   public languages?: string[];

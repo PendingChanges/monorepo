@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Pitch, QueryAllPitchesArgs } from 'src/models/generated/graphql';
-import { NgIf, NgFor, AsyncPipe } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { TranslocoModule } from '@ngneat/transloco';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Store } from '@ngrx/store';
@@ -16,14 +16,12 @@ import { LoadingRowComponent } from 'src/common/components/loading-row/loading-r
     templateUrl: './pitch-list.component.html',
     styleUrls: ['./pitch-list.component.scss'],
     imports: [
-        TranslocoModule,
-        InfiniteScrollModule,
-        NgIf,
-        NgFor,
-        PitchListItemComponent,
-        AsyncPipe,
-        LoadingRowComponent,
-    ]
+    TranslocoModule,
+    InfiniteScrollModule,
+    PitchListItemComponent,
+    AsyncPipe,
+    LoadingRowComponent
+]
 })
 export class PitchListComponent {
   @Input() public showClient: boolean = false;

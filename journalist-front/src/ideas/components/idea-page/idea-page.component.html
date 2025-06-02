@@ -1,4 +1,4 @@
-<ng-container *ngIf="idea$ | async; let idea">
+@if (idea$ | async; as idea) {
   <div class="container" *transloco="let t">
     <div class="row">
       <div class="col">
@@ -9,8 +9,7 @@
       <div class="col-2">{{ t("ideas.table.description") }} :</div>
       <div class="col">{{ idea.description }}</div>
     </div>
-
-    <ng-container *ngIf="pitches$ | async; let pitches">
+    @if (pitches$ | async; as pitches) {
       <div class="row">
         <div class="col">
           <app-idea-action-menu
@@ -32,6 +31,6 @@
           ></app-pitch-list>
         </div>
       </div>
-    </ng-container>
+    }
   </div>
-</ng-container>
+}
