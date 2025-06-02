@@ -5,12 +5,11 @@ import { Router } from '@angular/router';
 import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
-  selector: 'app-idea-list-item',
-  standalone: true,
-  imports: [CommonModule, TranslocoModule],
-  templateUrl: './idea-list-item.component.html',
-  styleUrls: ['./idea-list-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-idea-list-item',
+    imports: [CommonModule, TranslocoModule],
+    templateUrl: './idea-list-item.component.html',
+    styleUrls: ['./idea-list-item.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IdeaListItemComponent {
   @Input({ required: true }) public idea: Idea | null = null;

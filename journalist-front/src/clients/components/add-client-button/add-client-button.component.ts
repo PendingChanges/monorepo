@@ -10,9 +10,8 @@ import { TranslocoModule } from '@ngneat/transloco';
     selector: 'app-add-client-button',
     templateUrl: './add-client-button.component.html',
     styleUrls: ['./add-client-button.component.scss'],
-    standalone: true,
     imports: [TranslocoModule],
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddClientButtonComponent {
   constructor(private _modalService: NgbModal) {}

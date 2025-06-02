@@ -20,7 +20,6 @@ import { NgbTypeahead } from '@ng-bootstrap/ng-bootstrap';
     providers: [
         { provide: NG_VALUE_ACCESSOR, useExisting: ClientSelectorComponent, multi: true },
     ],
-    standalone: true,
     imports: [ReactiveFormsModule, NgbTypeahead, FormsModule]
 })
 export class ClientSelectorComponent implements ControlValueAccessor {

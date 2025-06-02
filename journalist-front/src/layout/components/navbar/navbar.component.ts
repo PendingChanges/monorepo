@@ -6,7 +6,6 @@ import { ProfileComponent } from '../profile/profile.component';
     selector: 'app-navbar',
     templateUrl: './navbar.component.html',
     styleUrls: ['./navbar.component.scss'],
-    standalone: true,
     imports: [LanguagePickerComponent, ProfileComponent]
 })
 export class NavbarComponent {}

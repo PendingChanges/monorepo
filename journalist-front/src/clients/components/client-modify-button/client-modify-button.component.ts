@@ -9,12 +9,11 @@ import {
 import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
-  selector: 'app-client-modify-button',
-  templateUrl: './client-modify-button.component.html',
-  styleUrls: ['./client-modify-button.component.scss'],
-  standalone: true,
-  imports: [TranslocoModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-client-modify-button',
+    templateUrl: './client-modify-button.component.html',
+    styleUrls: ['./client-modify-button.component.scss'],
+    imports: [TranslocoModule],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ClientModifyButtonComponent {
   @Input({ required: true }) public client: Client | null = null;

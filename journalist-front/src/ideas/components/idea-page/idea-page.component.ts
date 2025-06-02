@@ -16,17 +16,16 @@ import {
 } from 'src/ideas/state/ideas.selectors';
 
 @Component({
-  selector: 'app-idea-page',
-  templateUrl: './idea-page.component.html',
-  styleUrls: ['./idea-page.component.scss'],
-  standalone: true,
-  imports: [
-    NgIf,
-    TranslocoModule,
-    IdeaActionMenuComponent,
-    PitchListComponent,
-    AsyncPipe,
-  ],
+    selector: 'app-idea-page',
+    templateUrl: './idea-page.component.html',
+    styleUrls: ['./idea-page.component.scss'],
+    imports: [
+        NgIf,
+        TranslocoModule,
+        IdeaActionMenuComponent,
+        PitchListComponent,
+        AsyncPipe,
+    ]
 })
 export class IdeaPageComponent {
   constructor(private _route: ActivatedRoute, private _store: Store) {}

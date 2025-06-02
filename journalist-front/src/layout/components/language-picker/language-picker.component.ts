@@ -6,7 +6,6 @@ import { NgIf, NgFor, NgClass } from '@angular/common';
     selector: 'app-language-picker',
     templateUrl: './language-picker.component.html',
     styleUrls: ['./language-picker.component.scss'],
-    standalone: true,
     imports: [NgIf, NgFor, NgClass]
 })
 export class LanguagePickerComponent implements OnInit {

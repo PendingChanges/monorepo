@@ -10,18 +10,17 @@ import { PitchesActions } from 'src/pitches/state/pitches.actions';
 import { PitchActionMenuComponent } from '../pitch-action-menu/pitch-action-menu.component';
 
 @Component({
-  selector: 'app-pitch-page',
-  templateUrl: './pitch-page.component.html',
-  styleUrls: ['./pitch-page.component.scss'],
-  standalone: true,
-  imports: [
-    NgIf,
-    TranslocoModule,
-    RouterLink,
-    AsyncPipe,
-    DatePipe,
-    PitchActionMenuComponent,
-  ],
+    selector: 'app-pitch-page',
+    templateUrl: './pitch-page.component.html',
+    styleUrls: ['./pitch-page.component.scss'],
+    imports: [
+        NgIf,
+        TranslocoModule,
+        RouterLink,
+        AsyncPipe,
+        DatePipe,
+        PitchActionMenuComponent,
+    ]
 })
 export class PitchPageComponent implements OnInit {
   constructor(private _route: ActivatedRoute, private _store: Store) {}

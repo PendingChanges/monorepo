@@ -19,17 +19,16 @@ import {
 } from 'src/clients/state/clients.selectors';
 
 @Component({
-  selector: 'app-client-page',
-  templateUrl: './client-page.component.html',
-  styleUrls: ['./client-page.component.scss'],
-  standalone: true,
-  imports: [
-    NgIf,
-    TranslocoModule,
-    ClientActionMenuComponent,
-    PitchListComponent,
-    AsyncPipe,
-  ],
+    selector: 'app-client-page',
+    templateUrl: './client-page.component.html',
+    styleUrls: ['./client-page.component.scss'],
+    imports: [
+        NgIf,
+        TranslocoModule,
+        ClientActionMenuComponent,
+        PitchListComponent,
+        AsyncPipe,
+    ]
 })
 export class ClientPageComponent implements OnInit {
   constructor(private _route: ActivatedRoute, private _store: Store) {}

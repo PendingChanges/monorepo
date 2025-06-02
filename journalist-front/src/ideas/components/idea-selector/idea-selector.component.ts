@@ -17,18 +17,17 @@ import { IdeasService } from 'src/ideas/services/IdeasService';
 import { NgbTypeahead } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-idea-selector',
-  templateUrl: './idea-selector.component.html',
-  styleUrls: ['./idea-selector.component.scss'],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: IdeaSelectorComponent,
-      multi: true,
-    },
-  ],
-  standalone: true,
-  imports: [ReactiveFormsModule, NgbTypeahead, FormsModule],
+    selector: 'app-idea-selector',
+    templateUrl: './idea-selector.component.html',
+    styleUrls: ['./idea-selector.component.scss'],
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: IdeaSelectorComponent,
+            multi: true,
+        },
+    ],
+    imports: [ReactiveFormsModule, NgbTypeahead, FormsModule]
 })
 export class IdeaSelectorComponent implements ControlValueAccessor {
   constructor(private _ideasService: IdeasService) {}

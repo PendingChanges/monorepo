@@ -12,12 +12,11 @@ import { Store } from '@ngrx/store';
 import { IdeasActions } from 'src/ideas/state/ideas.actions';
 
 @Component({
-  selector: 'app-delete-idea-button',
-  templateUrl: './delete-idea-button.component.html',
-  styleUrls: ['./delete-idea-button.component.scss'],
-  standalone: true,
-  imports: [TranslocoModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-delete-idea-button',
+    templateUrl: './delete-idea-button.component.html',
+    styleUrls: ['./delete-idea-button.component.scss'],
+    imports: [TranslocoModule],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DeleteIdeaButtonComponent {
   @Input({ required: true }) public idea: Idea | null = null;

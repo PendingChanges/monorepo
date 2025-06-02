@@ -12,19 +12,18 @@ import { IdeaListItemComponent } from '../idea-list-item/idea-list-item.componen
 import { LoadingRowComponent } from 'src/common/components/loading-row/loading-row.component';
 
 @Component({
-  selector: 'app-idea-list',
-  templateUrl: './idea-list.component.html',
-  styleUrls: ['./idea-list.component.scss'],
-  standalone: true,
-  imports: [
-    InfiniteScrollModule,
-    NgFor,
-    NgIf,
-    DecimalPipe,
-    IdeaListItemComponent,
-    AsyncPipe,
-    LoadingRowComponent
-  ],
+    selector: 'app-idea-list',
+    templateUrl: './idea-list.component.html',
+    styleUrls: ['./idea-list.component.scss'],
+    imports: [
+        InfiniteScrollModule,
+        NgFor,
+        NgIf,
+        DecimalPipe,
+        IdeaListItemComponent,
+        AsyncPipe,
+        LoadingRowComponent
+    ]
 })
 export class IdeaListComponent {
   public ideas$: Observable<readonly Idea[]> = this._store.select(selectIdeas);

@@ -5,16 +5,15 @@ import { PitchesActionMenuComponent } from '../pitches-action-menu/pitches-actio
 import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
-  selector: 'app-pitches-page',
-  templateUrl: './pitches-page.component.html',
-  styleUrls: ['./pitches-page.component.scss'],
-  standalone: true,
-  imports: [
-    TranslocoModule,
-    PitchesActionMenuComponent,
-    PitchListComponent,
-    AsyncPipe,
-    NgIf,
-  ],
+    selector: 'app-pitches-page',
+    templateUrl: './pitches-page.component.html',
+    styleUrls: ['./pitches-page.component.scss'],
+    imports: [
+        TranslocoModule,
+        PitchesActionMenuComponent,
+        PitchListComponent,
+        AsyncPipe,
+        NgIf,
+    ]
 })
 export class PitchesPageComponent {}

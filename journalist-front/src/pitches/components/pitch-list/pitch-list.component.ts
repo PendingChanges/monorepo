@@ -12,19 +12,18 @@ import { PitchListItemComponent } from '../pitch-list-item/pitch-list-item.compo
 import { LoadingRowComponent } from 'src/common/components/loading-row/loading-row.component';
 
 @Component({
-  selector: 'app-pitch-list',
-  templateUrl: './pitch-list.component.html',
-  styleUrls: ['./pitch-list.component.scss'],
-  standalone: true,
-  imports: [
-    TranslocoModule,
-    InfiniteScrollModule,
-    NgIf,
-    NgFor,
-    PitchListItemComponent,
-    AsyncPipe,
-    LoadingRowComponent,
-  ],
+    selector: 'app-pitch-list',
+    templateUrl: './pitch-list.component.html',
+    styleUrls: ['./pitch-list.component.scss'],
+    imports: [
+        TranslocoModule,
+        InfiniteScrollModule,
+        NgIf,
+        NgFor,
+        PitchListItemComponent,
+        AsyncPipe,
+        LoadingRowComponent,
+    ]
 })
 export class PitchListComponent {
   @Input() public showClient: boolean = false;

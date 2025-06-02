@@ -4,12 +4,11 @@ import { Pitch } from 'src/models/generated/graphql';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-pitch-list-item',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './pitch-list-item.component.html',
-  styleUrls: ['./pitch-list-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-pitch-list-item',
+    imports: [CommonModule],
+    templateUrl: './pitch-list-item.component.html',
+    styleUrls: ['./pitch-list-item.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PitchListItemComponent {
   constructor(private _router: Router) {}

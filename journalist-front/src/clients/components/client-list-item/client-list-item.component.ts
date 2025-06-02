@@ -5,12 +5,11 @@ import { Client } from 'src/models/generated/graphql';
 import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
-  selector: 'app-client-list-item',
-  standalone: true,
-  imports: [CommonModule, TranslocoModule],
-  templateUrl: './client-list-item.component.html',
-  styleUrls: ['./client-list-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-client-list-item',
+    imports: [CommonModule, TranslocoModule],
+    templateUrl: './client-list-item.component.html',
+    styleUrls: ['./client-list-item.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ClientListItemComponent {
   constructor(private _router: Router) {}

@@ -5,12 +5,11 @@ import { TranslocoModule } from '@ngneat/transloco';
 import { SaveClientModel } from 'src/clients/components/save-client/save-client.component';
 
 @Component({
-  selector: 'app-add-idea-button',
-  templateUrl: './add-idea-button.component.html',
-  styleUrls: ['./add-idea-button.component.scss'],
-  standalone: true,
-  imports: [TranslocoModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-add-idea-button',
+    templateUrl: './add-idea-button.component.html',
+    styleUrls: ['./add-idea-button.component.scss'],
+    imports: [TranslocoModule],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddIdeaButtonComponent {
   constructor(private modalService: NgbModal) {}

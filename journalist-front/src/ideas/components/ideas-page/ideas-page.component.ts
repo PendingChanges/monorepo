@@ -10,16 +10,15 @@ import { IdeasActions } from 'src/ideas/state/ideas.actions';
 import { loading, selectIdeas } from 'src/ideas/state/ideas.selectors';
 
 @Component({
-  selector: 'app-ideas-page',
-  templateUrl: './ideas-page.component.html',
-  styleUrls: ['./ideas-page.component.scss'],
-  standalone: true,
-  imports: [
-    CommonModule,
-    TranslocoModule,
-    IdeasActionMenuComponent,
-    IdeaListComponent,
-    AsyncPipe,
-  ],
+    selector: 'app-ideas-page',
+    templateUrl: './ideas-page.component.html',
+    styleUrls: ['./ideas-page.component.scss'],
+    imports: [
+        CommonModule,
+        TranslocoModule,
+        IdeasActionMenuComponent,
+        IdeaListComponent,
+        AsyncPipe,
+    ]
 })
 export class IdeasComponent {}

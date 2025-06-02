@@ -12,20 +12,19 @@ import { ClientListItemComponent } from '../client-list-item/client-list-item.co
 import { LoadingRowComponent } from 'src/common/components/loading-row/loading-row.component';
 
 @Component({
-  selector: 'app-client-list',
-  templateUrl: './client-list.component.html',
-  styleUrls: ['./client-list.component.scss'],
-  standalone: true,
-  imports: [
-    TranslocoModule,
-    InfiniteScrollModule,
-    AsyncPipe,
-    NgFor,
-    DecimalPipe,
-    ClientListItemComponent,
-    LoadingRowComponent,
-    NgIf,
-  ],
+    selector: 'app-client-list',
+    templateUrl: './client-list.component.html',
+    styleUrls: ['./client-list.component.scss'],
+    imports: [
+        TranslocoModule,
+        InfiniteScrollModule,
+        AsyncPipe,
+        NgFor,
+        DecimalPipe,
+        ClientListItemComponent,
+        LoadingRowComponent,
+        NgIf,
+    ]
 })
 export class ClientListComponent {
   public clients$: Observable<readonly Client[]> =

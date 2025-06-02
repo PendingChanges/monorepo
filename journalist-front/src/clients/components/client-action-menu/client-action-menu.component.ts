@@ -5,16 +5,15 @@ import { ClientModifyButtonComponent } from '../client-modify-button/client-modi
 import { AddPitchButtonComponent } from 'src/pitches/components/add-pitch-button/add-pitch-button.component';
 
 @Component({
-  selector: 'app-client-action-menu',
-  templateUrl: './client-action-menu.component.html',
-  styleUrls: ['./client-action-menu.component.scss'],
-  standalone: true,
-  imports: [
-    ClientModifyButtonComponent,
-    AddPitchButtonComponent,
-    ClientDeleteButtonComponent,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-client-action-menu',
+    templateUrl: './client-action-menu.component.html',
+    styleUrls: ['./client-action-menu.component.scss'],
+    imports: [
+        ClientModifyButtonComponent,
+        AddPitchButtonComponent,
+        ClientDeleteButtonComponent,
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ClientActionMenuComponent {
   @Input({ required: true }) public client: Client | null = null;

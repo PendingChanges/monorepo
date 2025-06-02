@@ -5,16 +5,15 @@ import { ClientsActionMenuComponent } from '../clients-action-menu/clients-actio
 import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
-  selector: 'app-clients-page',
-  templateUrl: './clients-page.component.html',
-  styleUrls: ['./clients-page.component.scss'],
-  standalone: true,
-  imports: [
-    TranslocoModule,
-    CommonModule,
-    ClientsActionMenuComponent,
-    ClientListComponent,
-    AsyncPipe,
-  ],
+    selector: 'app-clients-page',
+    templateUrl: './clients-page.component.html',
+    styleUrls: ['./clients-page.component.scss'],
+    imports: [
+        TranslocoModule,
+        CommonModule,
+        ClientsActionMenuComponent,
+        ClientListComponent,
+        AsyncPipe,
+    ]
 })
 export class ClientsComponent {}

@@ -9,12 +9,11 @@ import {
 } from '../save-pitch/save-pitch.component';
 
 @Component({
-  selector: 'app-add-pitch-button',
-  templateUrl: './add-pitch-button.component.html',
-  styleUrls: ['./add-pitch-button.component.scss'],
-  standalone: true,
-  imports: [TranslocoModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-add-pitch-button',
+    templateUrl: './add-pitch-button.component.html',
+    styleUrls: ['./add-pitch-button.component.scss'],
+    imports: [TranslocoModule],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddPitchButtonComponent {
   @Input() public client: Client | null = null;

@@ -32,18 +32,17 @@ interface PitchForm {
 }
 
 @Component({
-  selector: 'app-save-pitch',
-  templateUrl: './save-pitch.component.html',
-  styleUrls: ['./save-pitch.component.scss'],
-  standalone: true,
-  imports: [
-    TranslocoModule,
-    ReactiveFormsModule,
-    ClientSelectorComponent,
-    IdeaSelectorComponent,
-    EditorModule,
-    NgbInputDatepicker,
-  ],
+    selector: 'app-save-pitch',
+    templateUrl: './save-pitch.component.html',
+    styleUrls: ['./save-pitch.component.scss'],
+    imports: [
+        TranslocoModule,
+        ReactiveFormsModule,
+        ClientSelectorComponent,
+        IdeaSelectorComponent,
+        EditorModule,
+        NgbInputDatepicker,
+    ]
 })
 export class AddPitchComponent implements OnInit {
   public data?: SavePitchDialogModel;

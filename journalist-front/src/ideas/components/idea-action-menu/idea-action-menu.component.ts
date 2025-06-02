@@ -5,16 +5,15 @@ import { AddPitchButtonComponent } from 'src/pitches/components/add-pitch-button
 import { ModifyIdeaButtonComponent } from '../modify-idea-button/modify-idea-button.component';
 
 @Component({
-  selector: 'app-idea-action-menu',
-  templateUrl: './idea-action-menu.component.html',
-  styleUrls: ['./idea-action-menu.component.scss'],
-  standalone: true,
-  imports: [
-    AddPitchButtonComponent,
-    DeleteIdeaButtonComponent,
-    ModifyIdeaButtonComponent,
-  ],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-idea-action-menu',
+    templateUrl: './idea-action-menu.component.html',
+    styleUrls: ['./idea-action-menu.component.scss'],
+    imports: [
+        AddPitchButtonComponent,
+        DeleteIdeaButtonComponent,
+        ModifyIdeaButtonComponent,
+    ],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class IdeaActionMenuComponent {
   @Input({ required: true }) public idea: Idea | null = null;

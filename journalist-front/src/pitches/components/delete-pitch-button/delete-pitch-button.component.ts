@@ -11,12 +11,11 @@ import { PitchesActions } from 'src/pitches/state/pitches.actions';
 import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
-  selector: 'app-delete-pitch-button',
-  standalone: true,
-  imports: [CommonModule, TranslocoModule],
-  templateUrl: './delete-pitch-button.component.html',
-  styleUrls: ['./delete-pitch-button.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-delete-pitch-button',
+    imports: [CommonModule, TranslocoModule],
+    templateUrl: './delete-pitch-button.component.html',
+    styleUrls: ['./delete-pitch-button.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DeletePitchButtonComponent {
   @Input() public pitch: Pitch | null = null;

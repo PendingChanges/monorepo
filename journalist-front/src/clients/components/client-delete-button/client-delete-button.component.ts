@@ -12,12 +12,11 @@ import { Store } from '@ngrx/store';
 import { ClientsActions } from 'src/clients/state/clients.actions';
 
 @Component({
-  selector: 'app-client-delete-button',
-  templateUrl: './client-delete-button.component.html',
-  styleUrls: ['./client-delete-button.component.scss'],
-  standalone: true,
-  imports: [TranslocoModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-client-delete-button',
+    templateUrl: './client-delete-button.component.html',
+    styleUrls: ['./client-delete-button.component.scss'],
+    imports: [TranslocoModule],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ClientDeleteButtonComponent {
   @Input({ required: true }) public client: Client | null = null;

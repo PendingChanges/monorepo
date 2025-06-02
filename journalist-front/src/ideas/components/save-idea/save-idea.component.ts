@@ -22,11 +22,10 @@ interface IdeaForm {
 }
 
 @Component({
-  selector: 'app-save-idea',
-  templateUrl: './save-idea.component.html',
-  styleUrls: ['./save-idea.component.scss'],
-  standalone: true,
-  imports: [ReactiveFormsModule, TranslocoModule],
+    selector: 'app-save-idea',
+    templateUrl: './save-idea.component.html',
+    styleUrls: ['./save-idea.component.scss'],
+    imports: [ReactiveFormsModule, TranslocoModule]
 })
 export class SaveIdeaComponent implements OnInit {
   public data?: SaveIdeaModel;
