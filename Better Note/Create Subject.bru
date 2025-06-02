@@ -6,6 +6,20 @@ meta {
 
 post {
   url: {{host}}
-  body: none
+  body: graphql
   auth: inherit
+}
+
+body:graphql {
+  mutation {
+    createSubject(input: { 
+      title: "subject", 
+      description: "subject" ,
+      tagsId: ["188085da-1c28-42c6-99ad-c6c957cc2e95"]
+    })
+    {
+      id
+    }
+  }
+  
 }
