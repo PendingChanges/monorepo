@@ -1,9 +1,6 @@
 import { TranslocoRootModule } from './infrastructure/transloco-root.module';
 import { EditorModule } from '@tinymce/tinymce-angular';
-import {
-  withInterceptorsFromDi,
-  provideHttpClient,
-} from '@angular/common/http';
+import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {
   BrowserAnimationsModule,
