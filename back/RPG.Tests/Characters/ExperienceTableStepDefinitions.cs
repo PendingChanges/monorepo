@@ -1,5 +1,7 @@
+
 using Reqnroll;
 using RPG.Domain.Characters;
+using Xunit;
 
 namespace RPG.Tests.Characters;
 
@@ -19,15 +21,15 @@ public sealed class ExperienceTableStepDefinitions(ExperienceTableContext experi
         );
     }
 
-    [When("I ask for the level corresponding to {string} experience points")]
-    public void WhenIAskForTheLevelCorrespondingToExperiencePoints(string p0)
+    [When("I ask for the level corresponding to {int} experience points")]
+    public void WhenIAskForTheLevelCorrespondingToExperiencePoints(int experiencePoints)
     {
-        throw new PendingStepException();
+        _experienceTableContext.AskedExperiencePoints = experiencePoints;
     }
 
-    [Then("I should get level {string}")]
-    public void ThenIShouldGetLevel(string p0)
+    [Then("I should get level {int}")]
+    public void ThenIShouldGetLevel(int level)
     {
-        throw new PendingStepException();
+        Assert.Equal(level, _experienceTableContext.ExperienceTable!.GetLevel(_experienceTableContext.AskedExperiencePoints));
     }
 }

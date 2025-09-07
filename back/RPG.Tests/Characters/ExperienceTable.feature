@@ -11,8 +11,8 @@ Scenario: I can get the level for a given experience points
 		| 3     | 300              |
 		| 4     | 600              |
 		| 5     | 1000             |
-	When I ask for the level corresponding to "<experiencePoints>" experience points
-	Then I should get level "<level>"
+	When I ask for the level corresponding to <experiencePoints> experience points
+	Then I should get level <level>
 Examples:
 	| experiencePoints | level |
 	| 0                | 1     |

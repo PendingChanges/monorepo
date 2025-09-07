@@ -1,6 +1,6 @@
-using NetTopologySuite.Utilities;
 using Reqnroll;
 using RPG.Domain.Characters;
+using Xunit;
 
 namespace RPG.Tests.Characters;
 
@@ -24,7 +24,7 @@ public sealed class CharacterStepDefinitions(CharacterContext characterContext)
     [Then("The character's name should be {string}")]
     public void ThenTheCharacterNameSouhldBe(string name)
     {
-        Assert.Equals(_characterContext.Character?.Name, name);
+        Assert.Equal(_characterContext.Character?.Name, name);
     }
 
     [Given("An existing character with the name {string}")]
@@ -54,7 +54,7 @@ public sealed class CharacterStepDefinitions(CharacterContext characterContext)
     [Then("The character should have {int} experience points")]
     public void ThenTheCharacterShouldHaveExperiencePoints(int sum)
     {
-        Assert.Equals(sum, _characterContext.Character?.ExperiencePoints);
+        Assert.Equal(sum, _characterContext.Character?.ExperiencePoints);
     }
 
 }
