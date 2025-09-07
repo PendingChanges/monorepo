@@ -195,6 +195,74 @@ this.ScenarioInitialize(scenarioInfo);
             await this.ScenarioCleanupAsync();
         }
         
+        [Xunit.SkippableTheoryAttribute(DisplayName="I can get the experience points required for next level")]
+        [Xunit.TraitAttribute("FeatureTitle", "ExperienceTable")]
+        [Xunit.TraitAttribute("Description", "I can get the experience points required for next level")]
+        [Xunit.TraitAttribute("Category", "experience-table")]
+        [Xunit.InlineDataAttribute("0", "100", new string[0])]
+        [Xunit.InlineDataAttribute("50", "50", new string[0])]
+        [Xunit.InlineDataAttribute("100", "200", new string[0])]
+        [Xunit.InlineDataAttribute("250", "50", new string[0])]
+        [Xunit.InlineDataAttribute("300", "300", new string[0])]
+        [Xunit.InlineDataAttribute("450", "150", new string[0])]
+        [Xunit.InlineDataAttribute("600", "400", new string[0])]
+        [Xunit.InlineDataAttribute("800", "200", new string[0])]
+        [Xunit.InlineDataAttribute("1000", "0", new string[0])]
+        public async global::System.Threading.Tasks.Task ICanGetTheExperiencePointsRequiredForNextLevel(string experiencePoints, string experiencePointsForNextLevel, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "experience-table"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("experiencePoints", experiencePoints);
+            argumentsOfScenario.Add("experiencePointsForNextLevel", experiencePointsForNextLevel);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("I can get the experience points required for next level", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 30
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+                global::Reqnroll.Table table2 = new global::Reqnroll.Table(new string[] {
+                            "Level",
+                            "ExperiencePoints"});
+                table2.AddRow(new string[] {
+                            "1",
+                            "0"});
+                table2.AddRow(new string[] {
+                            "2",
+                            "100"});
+                table2.AddRow(new string[] {
+                            "3",
+                            "300"});
+                table2.AddRow(new string[] {
+                            "4",
+                            "600"});
+                table2.AddRow(new string[] {
+                            "5",
+                            "1000"});
+#line 31
+ await testRunner.GivenAsync("A experience table with the following levels:", ((string)(null)), table2, "Given ");
+#line hidden
+#line 38
+ await testRunner.WhenAsync(string.Format("I ask for the experience points required for next level from experience points {0" +
+                            "}", experiencePoints), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 39
+ await testRunner.ThenAsync(string.Format("I should get {0} experience points", experiencePointsForNextLevel), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "2.0.0.0")]
         [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : object, Xunit.IAsyncLifetime
