@@ -6,11 +6,10 @@ import {
   AddPitchComponent,
   SavePitchDialogModel,
 } from '../save-pitch/save-pitch.component';
-import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
     selector: 'app-pitch-modify-button',
-    imports: [TranslocoModule],
+    imports: [],
     templateUrl: './pitch-modify-button.component.html',
     styleUrls: ['./pitch-modify-button.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

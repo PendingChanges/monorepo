@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Pitch } from 'src/models/generated/graphql';
-import { TranslocoModule } from '@ngneat/transloco';
 import { AsyncPipe, DatePipe } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { currentPitch } from 'src/pitches/state/pitches.selectors';
@@ -14,7 +13,7 @@ import { PitchActionMenuComponent } from '../pitch-action-menu/pitch-action-menu
     templateUrl: './pitch-page.component.html',
     styleUrls: ['./pitch-page.component.scss'],
     imports: [
-    TranslocoModule,
+    
     RouterLink,
     AsyncPipe,
     DatePipe,

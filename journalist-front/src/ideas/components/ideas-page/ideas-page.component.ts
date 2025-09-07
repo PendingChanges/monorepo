@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { AsyncPipe } from '@angular/common';
 import { IdeaListComponent } from '../idea-list/idea-list.component';
 import { IdeasActionMenuComponent } from '../ideas-action-menu/ideas-action-menu.component';
-import { TranslocoModule } from '@ngneat/transloco';
 import { Store } from '@ngrx/store';
 import { IdeasActions } from 'src/ideas/state/ideas.actions';
 import { loading, selectIdeas } from 'src/ideas/state/ideas.selectors';
@@ -14,7 +13,7 @@ import { loading, selectIdeas } from 'src/ideas/state/ideas.selectors';
     templateUrl: './ideas-page.component.html',
     styleUrls: ['./ideas-page.component.scss'],
     imports: [
-    TranslocoModule,
+    
     IdeasActionMenuComponent,
     IdeaListComponent,
     AsyncPipe

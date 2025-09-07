@@ -13,10 +13,8 @@ import {
   Pitch,
   ModifyPitchInput,
 } from 'src/models/generated/graphql';
-import { PitchesService } from 'src/pitches/services/PitchesService';
-import { EditorComponent, EditorModule } from '@tinymce/tinymce-angular';
+import { EditorModule } from '@tinymce/tinymce-angular';
 import { ClientSelectorComponent } from '../../../clients/components/client-selector/client-selector.component';
-import { TranslocoModule } from '@ngneat/transloco';
 import { IdeaSelectorComponent } from 'src/ideas/components/idea-selector/idea-selector.component';
 import { Store } from '@ngrx/store';
 import { PitchesActions } from 'src/pitches/state/pitches.actions';
@@ -36,7 +34,6 @@ interface PitchForm {
     templateUrl: './save-pitch.component.html',
     styleUrls: ['./save-pitch.component.scss'],
     imports: [
-        TranslocoModule,
         ReactiveFormsModule,
         ClientSelectorComponent,
         IdeaSelectorComponent,

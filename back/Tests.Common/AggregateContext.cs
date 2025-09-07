@@ -1,8 +1,8 @@
 ﻿using CQRS;
 
-namespace Journalist.Crm.UnitTests.Domain;
+namespace Tests.Common;
 
-public class AggregateContext
+public sealed class AggregateContext
 {
     public Aggregate? Aggregate { get; set; }
 

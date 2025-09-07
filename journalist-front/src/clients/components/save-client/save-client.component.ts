@@ -21,7 +21,7 @@ interface ClientForm {
     selector: 'app-save-client',
     templateUrl: './save-client.component.html',
     styleUrls: ['./save-client.component.scss'],
-    imports: [TranslocoModule, ReactiveFormsModule]
+    imports: [ ReactiveFormsModule]
 })
 export class SaveClientComponent implements OnInit {
   public data?: SaveClientModel;

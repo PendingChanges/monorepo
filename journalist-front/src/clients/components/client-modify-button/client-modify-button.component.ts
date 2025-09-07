@@ -6,7 +6,6 @@ import {
   SaveClientComponent,
   SaveClientModel,
 } from '../save-client/save-client.component';
-import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
     selector: 'app-client-modify-button',

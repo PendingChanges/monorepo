@@ -9,7 +9,6 @@ import {
 import { PitchesService } from 'src/pitches/services/PitchesService';
 import { PitchListComponent } from '../../../pitches/components/pitch-list/pitch-list.component';
 import { ClientActionMenuComponent } from '../client-action-menu/client-action-menu.component';
-import { TranslocoModule } from '@ngneat/transloco';
 import { AsyncPipe } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { ClientsActions } from 'src/clients/state/clients.actions';
@@ -23,7 +22,7 @@ import {
     templateUrl: './client-page.component.html',
     styleUrls: ['./client-page.component.scss'],
     imports: [
-    TranslocoModule,
+    
     ClientActionMenuComponent,
     PitchListComponent,
     AsyncPipe

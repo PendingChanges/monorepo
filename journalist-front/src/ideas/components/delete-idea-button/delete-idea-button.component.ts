@@ -7,7 +7,6 @@ import {
 } from 'src/common/components/confirm-dialog/confirm-dialog.component';
 import { DeleteIdeaInput, Idea } from 'src/models/generated/graphql';
 import { IdeasService } from 'src/ideas/services/IdeasService';
-import { TranslocoModule } from '@ngneat/transloco';
 import { Store } from '@ngrx/store';
 import { IdeasActions } from 'src/ideas/state/ideas.actions';
 

@@ -1,0 +1,10 @@
+﻿{
+  "stryker-config": {
+    "reporters": [
+      "progress",
+      "html"
+    ],
+    "project": "RPG.Domain.csproj",
+    "coverage-analysis": "off"
+  }
+}

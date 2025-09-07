@@ -1,8 +1,7 @@
-using System;
 using BetterNote.Domain.Tags;
 using BetterNote.Domain.Tags.Events;
-using Journalist.Crm.UnitTests.Domain;
 using Reqnroll;
+using Tests.Common;
 using Xunit;
 
 namespace BetterNote.UnitTests;

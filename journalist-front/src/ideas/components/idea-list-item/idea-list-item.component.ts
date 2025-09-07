@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 import { Idea } from 'src/models/generated/graphql';
 import { Router } from '@angular/router';
-import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
     selector: 'app-idea-list-item',

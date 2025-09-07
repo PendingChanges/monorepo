@@ -6,7 +6,6 @@ import { IdeasService } from 'src/ideas/services/IdeasService';
 import { PitchesService } from 'src/pitches/services/PitchesService';
 import { PitchListComponent } from '../../../pitches/components/pitch-list/pitch-list.component';
 import { IdeaActionMenuComponent } from '../idea-action-menu/idea-action-menu.component';
-import { TranslocoModule } from '@ngneat/transloco';
 import { AsyncPipe } from '@angular/common';
 import { Store } from '@ngrx/store';
 import { IdeasActions } from 'src/ideas/state/ideas.actions';
@@ -20,7 +19,7 @@ import {
     templateUrl: './idea-page.component.html',
     styleUrls: ['./idea-page.component.scss'],
     imports: [
-    TranslocoModule,
+    
     IdeaActionMenuComponent,
     PitchListComponent,
     AsyncPipe

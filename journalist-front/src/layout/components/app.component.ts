@@ -4,7 +4,6 @@ import {
   RouterLinkActive,
   RouterOutlet,
 } from '@angular/router';
-import { TranslocoModule } from '@ngneat/transloco';
 import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
@@ -12,7 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     imports: [
-        TranslocoModule,
+        
         NavbarComponent,
         RouterLink,
         RouterLinkActive,

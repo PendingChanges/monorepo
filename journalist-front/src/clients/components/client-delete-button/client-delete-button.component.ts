@@ -7,7 +7,6 @@ import {
 } from 'src/common/components/confirm-dialog/confirm-dialog.component';
 import { Client, DeleteClientInput } from 'src/models/generated/graphql';
 import { ClientsService } from 'src/clients/services/ClientsService';
-import { TranslocoModule } from '@ngneat/transloco';
 import { Store } from '@ngrx/store';
 import { ClientsActions } from 'src/clients/state/clients.actions';
 

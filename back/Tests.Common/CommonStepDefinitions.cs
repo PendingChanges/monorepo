@@ -1,11 +1,10 @@
-﻿using Journalist.Crm.UnitTests.Domain;
-using Reqnroll;
+﻿using Reqnroll;
 using Xunit;
 
 namespace Tests.Common;
 
 [Binding]
-public class CommonStepDefinitions(AggregateContext aggregateContext)
+public sealed class CommonStepDefinitions(AggregateContext aggregateContext)
 {
     private readonly AggregateContext _aggregateContext = aggregateContext;
 

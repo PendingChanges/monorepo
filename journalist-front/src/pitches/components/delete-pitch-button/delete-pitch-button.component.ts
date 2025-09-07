@@ -8,11 +8,10 @@ import {
   ConfirmDialogModel,
 } from 'src/common/components/confirm-dialog/confirm-dialog.component';
 import { PitchesActions } from 'src/pitches/state/pitches.actions';
-import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
     selector: 'app-delete-pitch-button',
-    imports: [TranslocoModule],
+    imports: [],
     templateUrl: './delete-pitch-button.component.html',
     styleUrls: ['./delete-pitch-button.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush

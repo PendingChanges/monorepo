@@ -1,0 +1,10 @@
+﻿{
+  "stryker-config": {
+    "reporters": [
+      "progress",
+      "html"
+    ],
+    "project": "BetterNote.Domain.csproj",
+    "coverage-analysis": "off"
+  }
+}

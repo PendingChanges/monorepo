@@ -6,9 +6,9 @@ using Moq;
 using System.Data;
 using Xunit;
 
-namespace Doc.Management.UnitTests.Marten;
+namespace Tests.Common.Marten;
 
-public class AggregateRepositoryShould
+public sealed class AggregateRepositoryShould
 {
     private readonly Mock<IDocumentStore> _mockDocumentStore;
     private readonly Mock<IDocumentSession> _mockSession;
@@ -31,7 +31,7 @@ public class AggregateRepositoryShould
     {
         // Arrange
         var aggregateId = Guid.NewGuid();
-        var version = 1L;
+        const long version = 1L;
         var events = new List<object> { new { Name = "TestEvent" } };
         var cancellationToken = new CancellationToken();
 
@@ -53,7 +53,7 @@ public class AggregateRepositoryShould
 
         _mockSession
             .Setup(x =>
-                x.Events.AggregateStreamAsync<Aggregate>(
+                x.Events.AggregateStreamAsync(
                     aggregateId,
                     It.IsAny<long>(),
                     It.IsAny<DateTimeOffset?>(),

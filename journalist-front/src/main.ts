@@ -1,6 +1,9 @@
 import { TranslocoRootModule } from './infrastructure/transloco-root.module';
 import { EditorModule } from '@tinymce/tinymce-angular';
-import { withInterceptorsFromDi, provideHttpClient } from '@angular/common/http';
+import {
+  withInterceptorsFromDi,
+  provideHttpClient,
+} from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {
   BrowserAnimationsModule,
@@ -32,6 +35,9 @@ import { ideasReducer } from './ideas/state/ideas.reducer';
 import { provideRouter } from '@angular/router';
 import { AppComponent } from './layout/components/app.component';
 import { pitchesReducer } from './pitches/state/pitches.reducer';
+import { provideTransloco } from '@jsverse/transloco';
+import { TranslocoHttpLoader } from './infrastructure/transloco-loader';
+import { PartialTranslocoConfig } from 'node_modules/@jsverse/transloco/lib/transloco.config';
 
 const apolloDefaultOptions: DefaultOptions = {
   watchQuery: {
@@ -92,6 +98,15 @@ bootstrapApplication(AppComponent, {
       autoPause: true, // Pauses recording actions and state changes when the extension window is not open
       trace: false, //  If set to true, will include stack trace for every dispatched action, so you can see it in trace tab jumping directly to that part of code
       traceLimit: 75, // maximum stack trace frames to be stored (in case trace option was provided as true)
+    }),
+    provideTransloco({
+      config: <PartialTranslocoConfig>{
+        availableLangs: ['en', 'fr'],
+        defaultLang: 'fr',
+        reRenderOnLangChange: true,
+        prodMode: !isDevMode(),
+      },
+      loader: TranslocoHttpLoader,
     }),
   ],
 }).catch((err) => console.error(err));

@@ -2,7 +2,6 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { Client, Idea } from 'src/models/generated/graphql';
 
-import { TranslocoModule } from '@ngneat/transloco';
 import {
   AddPitchComponent,
   SavePitchDialogModel,
@@ -12,7 +11,7 @@ import {
     selector: 'app-add-pitch-button',
     templateUrl: './add-pitch-button.component.html',
     styleUrls: ['./add-pitch-button.component.scss'],
-    imports: [TranslocoModule],
+    imports: [],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddPitchButtonComponent {

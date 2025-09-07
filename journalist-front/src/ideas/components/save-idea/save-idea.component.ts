@@ -14,7 +14,7 @@ import {
 } from 'src/models/generated/graphql';
 import { IdeasActions } from 'src/ideas/state/ideas.actions';
 import { SaveType } from 'src/models/SaveType';
-import { TranslocoModule, TranslocoService } from '@ngneat/transloco';
+import {  TranslocoService } from '@ngneat/transloco';
 
 interface IdeaForm {
   name: FormControl<string>;

@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Idea, QueryAllIdeasArgs } from 'src/models/generated/graphql';
 import { DecimalPipe, AsyncPipe } from '@angular/common';
-import { TranslocoModule } from '@ngneat/transloco';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Observable } from 'rxjs';
 import { loading, selectIdeas } from 'src/ideas/state/ideas.selectors';

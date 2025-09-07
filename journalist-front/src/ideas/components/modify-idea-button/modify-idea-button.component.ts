@@ -6,7 +6,6 @@ import {
   SaveIdeaComponent,
   SaveIdeaModel,
 } from '../save-idea/save-idea.component';
-import { TranslocoModule } from '@ngneat/transloco';
 
 @Component({
     selector: 'app-modify-idea-button',
