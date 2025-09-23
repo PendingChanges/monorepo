@@ -12,13 +12,13 @@ public sealed class PartyStepDefinitions(PartyContext partyContext)
     [Given("A party with a member called {string}")]
     public void GivenAPartyWithAMemberCalled(string alreadyThere)
     {
-        _partyContext.Party = new Domain.Parties.Party([new Character(alreadyThere, ExperienceTable.Empty())]);
+        _partyContext.Party = new Domain.Parties.Party([Character.CreateNew(alreadyThere)]);
     }
 
     [When("I add a member {string} to the party")]
     public void WhenIAddAMemberToTheParty(string added)
     {
-        _partyContext.MemberAddedToParty = new Character(added, ExperienceTable.Empty());
+        _partyContext.MemberAddedToParty = Character.CreateNew(added);
         _partyContext.Party = _partyContext.Party?.AddMember(_partyContext.MemberAddedToParty);
     }
 

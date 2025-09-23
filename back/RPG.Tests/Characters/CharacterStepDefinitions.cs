@@ -1,5 +1,6 @@
 using Reqnroll;
 using RPG.Domain.Characters;
+using System.Xml.Linq;
 using Xunit;
 
 namespace RPG.Tests.Characters;
@@ -18,7 +19,7 @@ public sealed class CharacterStepDefinitions(CharacterContext characterContext)
     [When("I create a character with the name {string}")]
     public void WhenICreateACharacterWithTheName(string name)
     {
-        _characterContext.Character = new Character(name, ExperienceTable.Empty());
+        _characterContext.Character = Character.CreateNew(name);
     }
 
     [Then("The character's name should be {string}")]
@@ -30,7 +31,7 @@ public sealed class CharacterStepDefinitions(CharacterContext characterContext)
     [Given("An existing character with the name {string}")]
     public void GivenAnExistingCharacterWithTheName(string oldName)
     {
-        _characterContext.Character = new Character(oldName, ExperienceTable.Empty());
+        _characterContext.Character = Character.CreateNew(oldName);
     }
 
     [When("I rename the character to {string}")]
@@ -42,7 +43,8 @@ public sealed class CharacterStepDefinitions(CharacterContext characterContext)
     [Given("An existing character with the name {string} and {int} experience points")]
     public void GivenAnExistingCharacterWithTheNameAndExperiencePoints(string name, int xpBase)
     {
-        _characterContext.Character = new Character(name, ExperienceTable.Empty(), xpBase);
+        _characterContext.Character = Character.CreateNew(name)
+                                            .GainExperience(xpBase);
     }
 
     [When("I add {int} experience points to the character")]

@@ -6,4 +6,8 @@
 		<Nullable>enable</Nullable>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Creedengo" Version="2.1.0"></PackageReference>
+	</ItemGroup>
 </Project>

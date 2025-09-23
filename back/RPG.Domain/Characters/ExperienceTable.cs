@@ -1,6 +1,6 @@
 ﻿
 namespace RPG.Domain.Characters;
-public class ExperienceTable
+public sealed class ExperienceTable
 {
     private readonly IDictionary<int, int> _experienceLevels;
 
