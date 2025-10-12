@@ -19,6 +19,7 @@ csharp_style_expression_bodied_local_functions = false:silent
 
 # S1135: Track uses of "TODO" tags
 dotnet_diagnostic.S1135.severity = suggestion
+csharp_style_prefer_simple_property_accessors = true:suggestion
 
 [*.{cs,vb}]
 #### Naming styles ####

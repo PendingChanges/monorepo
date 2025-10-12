@@ -2,15 +2,15 @@
 namespace RPG.Domain.Characters;
 public sealed class ExperienceTable
 {
-    private readonly IDictionary<int, int> _experienceLevels;
+    private readonly IDictionary<int, int> _experienceLevelsGaps;
 
-    private ExperienceTable(IDictionary<int, int> experienceLevels) 
+    private ExperienceTable(IDictionary<int, int> experianceLevelsGaps) 
     { 
-        _experienceLevels = experienceLevels;
+        _experienceLevelsGaps = experianceLevelsGaps;
     }
 
     public int GetLevel(int experiencePoints)
-        => _experienceLevels.Where(kvp => kvp.Value <= experiencePoints)
+        => _experienceLevelsGaps.Where(kvp => kvp.Value <= experiencePoints)
                    .OrderByDescending(kvp => kvp.Key)
                    .Select(kvp => kvp.Key)
                    .FirstOrDefault();
@@ -19,12 +19,12 @@ public sealed class ExperienceTable
     {
         var currentLevel = GetLevel(experiencePoints);
         
-        if (!_experienceLevels.ContainsKey(currentLevel + 1))
+        if (!_experienceLevelsGaps.ContainsKey(currentLevel + 1))
         {
             return 0;
         }
 
-        return _experienceLevels[currentLevel + 1] - experiencePoints;
+        return _experienceLevelsGaps[currentLevel + 1] - experiencePoints;
     }
 
     public static ExperienceTable Empty() => new(new Dictionary<int, int>());

@@ -105,7 +105,7 @@ namespace RPG.Tests.Characters
         
         private static global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages InitializeCucumberMessages()
         {
-            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Characters/Character.feature", 5);
+            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Characters/Character.feature", 4);
         }
         
         async global::System.Threading.Tasks.Task global::Xunit.IAsyncLifetime.InitializeAsync()
@@ -133,12 +133,12 @@ namespace RPG.Tests.Characters
             await this.TestTearDownAsync();
         }
         
-        [global::Xunit.SkippableTheoryAttribute(DisplayName="A character must have a name")]
+        [global::Xunit.SkippableTheoryAttribute(DisplayName="A character can be created with default values")]
         [global::Xunit.TraitAttribute("FeatureTitle", "Character")]
-        [global::Xunit.TraitAttribute("Description", "A character must have a name")]
+        [global::Xunit.TraitAttribute("Description", "A character can be created with default values")]
         [global::Xunit.TraitAttribute("Category", "character")]
-        [global::Xunit.InlineDataAttribute("pouet", "0", new string[0])]
-        public async global::System.Threading.Tasks.Task ACharacterMustHaveAName(string name, string @__pickleIndex, string[] exampleTags)
+        [global::Xunit.InlineDataAttribute("pouet", "1", "10", "10", "10", "100", "50", "5", "5", "5", "5", "0", new string[0])]
+        public async global::System.Threading.Tasks.Task ACharacterCanBeCreatedWithDefaultValues(string name, string level, string strength, string precision, string intelligence, string hp, string mp, string defense, string spirit, string evasion, string speed, string @__pickleIndex, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "character"};
@@ -149,8 +149,18 @@ namespace RPG.Tests.Characters
             string[] tagsOfScenario = @__tags;
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("name", name);
+            argumentsOfScenario.Add("level", level);
+            argumentsOfScenario.Add("strength", strength);
+            argumentsOfScenario.Add("precision", precision);
+            argumentsOfScenario.Add("intelligence", intelligence);
+            argumentsOfScenario.Add("hp", hp);
+            argumentsOfScenario.Add("mp", mp);
+            argumentsOfScenario.Add("defense", defense);
+            argumentsOfScenario.Add("spirit", spirit);
+            argumentsOfScenario.Add("evasion", evasion);
+            argumentsOfScenario.Add("speed", speed);
             string pickleIndex = @__pickleIndex;
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("A character must have a name", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("A character can be created with default values", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
 #line 6
@@ -171,6 +181,36 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
 #line 9
  await testRunner.ThenAsync(string.Format("The character\'s name should be \"{0}\"", name), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+#line 10
+ await testRunner.AndAsync(string.Format("The character\'s level should be {0}", level), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 11
+ await testRunner.AndAsync(string.Format("The character\'s strength should be {0}", strength), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 12
+ await testRunner.AndAsync(string.Format("The character\'s precision should be {0}", precision), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 13
+ await testRunner.AndAsync(string.Format("The character\'s intelligence should be {0}", intelligence), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 14
+ await testRunner.AndAsync(string.Format("The character\'s hp should be {0}", hp), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 15
+ await testRunner.AndAsync(string.Format("The character\'s mp should be {0}", mp), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 16
+ await testRunner.AndAsync(string.Format("the character\'s defense should be {0}", defense), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 17
+ await testRunner.AndAsync(string.Format("the character\'s spirit should be {0}", spirit), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 18
+ await testRunner.AndAsync(string.Format("the character\'s evasion should be {0}", evasion), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 19
+ await testRunner.AndAsync(string.Format("the character\'s speed should be {0}", speed), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
@@ -197,7 +237,7 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("A character can be renamed", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 15
+#line 25
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -207,60 +247,14 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 16
+#line 26
  await testRunner.GivenAsync(string.Format("An existing character with the name \"{0}\"", oldName), ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 17
+#line 27
  await testRunner.WhenAsync(string.Format("I rename the character to \"{0}\"", newName), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 18
+#line 28
  await testRunner.ThenAsync(string.Format("The character\'s name should be \"{0}\"", newName), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
-#line hidden
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [global::Xunit.SkippableTheoryAttribute(DisplayName="A character can gain experience points")]
-        [global::Xunit.TraitAttribute("FeatureTitle", "Character")]
-        [global::Xunit.TraitAttribute("Description", "A character can gain experience points")]
-        [global::Xunit.TraitAttribute("Category", "character")]
-        [global::Xunit.InlineDataAttribute("pouet", "0", "5", "5", "2", new string[0])]
-        public async global::System.Threading.Tasks.Task ACharacterCanGainExperiencePoints(string name, string xpBase, string xp, string xpSum, string @__pickleIndex, string[] exampleTags)
-        {
-            string[] @__tags = new string[] {
-                    "character"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
-            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("name", name);
-            argumentsOfScenario.Add("xpBase", xpBase);
-            argumentsOfScenario.Add("xp", xp);
-            argumentsOfScenario.Add("xpSum", xpSum);
-            string pickleIndex = @__pickleIndex;
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("A character can gain experience points", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
-            string[] tagsOfRule = ((string[])(null));
-            global::Reqnroll.RuleInfo ruleInfo = null;
-#line 24
-this.ScenarioInitialize(scenarioInfo, ruleInfo);
-#line hidden
-            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                await testRunner.SkipScenarioAsync();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 25
- await testRunner.GivenAsync(string.Format("An existing character with the name \"{0}\" and {1} experience points", name, xpBase), ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
-#line 26
- await testRunner.WhenAsync(string.Format("I add {0} experience points to the character", xp), ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
-#line hidden
-#line 27
- await testRunner.ThenAsync(string.Format("The character should have {0} experience points", xpSum), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();

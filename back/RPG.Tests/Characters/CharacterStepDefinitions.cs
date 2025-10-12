@@ -40,23 +40,64 @@ public sealed class CharacterStepDefinitions(CharacterContext characterContext)
         _characterContext.Character = _characterContext.Character?.Rename(newName);
     }
 
-    [Given("An existing character with the name {string} and {int} experience points")]
-    public void GivenAnExistingCharacterWithTheNameAndExperiencePoints(string name, int xpBase)
+    [Then("The character's level should be {int}")]
+    public void ThenTheCharactersLevelShouldBe(int expectedLevel)
     {
-        _characterContext.Character = Character.CreateNew(name)
-                                            .GainExperience(xpBase);
+        Assert.Equal(expectedLevel, _characterContext.Character?.Level);
     }
 
-    [When("I add {int} experience points to the character")]
-    public void WhenIAddExperiencePointsToTheCharacter(int xp)
+    [Then("The character's strength should be {int}")]
+    public void ThenTheCharactersStrengthShouldBe(int expectedStrength)
     {
-        _characterContext.Character = _characterContext.Character?.GainExperience(xp);
+        Assert.Equal(expectedStrength, _characterContext.Character?.Strength);
     }
 
-    [Then("The character should have {int} experience points")]
-    public void ThenTheCharacterShouldHaveExperiencePoints(int sum)
+    [Then("The character's precision should be {int}")]
+    public void ThenTheCharactersPrecisionShouldBe(int expectedPrecision)
     {
-        Assert.Equal(sum, _characterContext.Character?.ExperiencePoints);
+        Assert.Equal(expectedPrecision, _characterContext.Character?.Precision);
+    }
+
+    [Then("The character's intelligence should be {int}")]
+    public void ThenTheCharactersIntelligenceShouldBe(int expectedIntelligence)
+    {
+        Assert.Equal(expectedIntelligence, _characterContext.Character?.Intelligence);
+    }
+
+    [Then("The character's hp should be {int}")]
+    public void ThenTheCharactersHpShouldBe(int expectedHp)
+    {
+        Assert.Equal(expectedHp, _characterContext.Character?.HP);
+    }
+
+    [Then("The character's mp should be {int}")]
+    public void ThenTheCharactersMpShouldBe(int expectedMp)
+    {
+        Assert.Equal(expectedMp, _characterContext.Character?.MP);
+    }
+
+    [Then("the character's defense should be {int}")]
+    public void ThenTheCharactersDefenseShouldBe(int expectedDefense)
+    {
+        Assert.Equal(expectedDefense, _characterContext.Character?.Defense);
+    }
+
+    [Then("the character's spirit should be {int}")]
+    public void ThenTheCharactersSpiritShouldBe(int expectedSpirit)
+    {
+        Assert.Equal(expectedSpirit, _characterContext.Character?.Spirit);
+    }
+
+    [Then("the character's evasion should be {int}")]
+    public void ThenTheCharactersEvasionShouldBe(int expectedEvasion)
+    {
+        Assert.Equal(expectedEvasion, _characterContext.Character?.Evasion);
+    }
+
+    [Then("the character's speed should be {int}")]
+    public void ThenTheCharactersSpeedShouldBe(int expectedSpeed)
+    {
+        Assert.Equal(expectedSpeed, _characterContext.Character?.Speed);
     }
 
 }

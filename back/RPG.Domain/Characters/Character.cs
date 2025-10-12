@@ -1,27 +1,40 @@
-﻿namespace RPG.Domain.Characters;
+﻿using RPG.Domain.Jobs;
+
+namespace RPG.Domain.Characters;
 
 public sealed record Character
 {
     private string _name;
-    private CharacterNumbers _numbers;
+    private readonly int _level;
+    private readonly StatisticTable _statisticTable;
+    private readonly JobCollection _jobCollection;
 
     public string Name => _name;
-    public int ExperiencePoints => _numbers.ExperiencePoints;
+    public int Level => _level;
+    public JobCollection Jobs => _jobCollection;
+    
+    // Expose statistics from StatisticTable
+    public int Strength => _statisticTable.Strength.Value;
+    public int Precision => _statisticTable.Precision.Value;
+    public int Intelligence => _statisticTable.Intelligence.Value;
+    public int HP => _statisticTable.HP.Value;
+    public int MP => _statisticTable.MP.Value;
+    public int Defense => _statisticTable.Defense.Value;
+    public int Spirit => _statisticTable.Spirit.Value;
+    public int Evasion => _statisticTable.Evasion.Value;
+    public int Speed => _statisticTable.Speed.Value;
 
-    private Character(string name, CharacterNumbers numbers)
+    private Character(string name, int level, StatisticTable statisticTable, JobCollection jobCollection)
     {
         _name = name;
-        _numbers = numbers;
+        _level = level;
+        _statisticTable = statisticTable;
+        _jobCollection = jobCollection;
     }
 
     public Character? Rename(string newName)
         => this with { _name = newName };
 
-    public Character GainExperience(int points)
-        => this with { _numbers = _numbers.GainExperience(points) };
-
-    public int GetLevel() => _numbers.GetLevel();
-
     public static Character CreateNew(string name)
-        => new(name, CharacterNumbers.New());
+        => new(name, 1, StatisticTable.New(), DefaultJobFactory.CreateDefaultJobs());
 }
