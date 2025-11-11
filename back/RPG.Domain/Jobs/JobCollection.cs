@@ -1,6 +1,6 @@
 ﻿namespace RPG.Domain.Jobs;
 
-public class JobCollection
+public sealed class JobCollection
 {
     private readonly List<Job> _jobs = new();
 

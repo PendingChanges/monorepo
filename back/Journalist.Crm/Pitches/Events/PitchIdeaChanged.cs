@@ -1,3 +1,3 @@
 ﻿namespace Journalist.Crm.Domain.Pitches.Events;
 
-public record PitchIdeaChanged(Guid Id, Guid IdeaId);
+public sealed record PitchIdeaChanged(Guid Id, Guid IdeaId);

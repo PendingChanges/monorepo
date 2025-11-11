@@ -2,4 +2,4 @@
 
 namespace Journalist.Crm.Domain.Pitches.Commands;
 
-public record DeletePitch(Guid Id) : ICommand;
+public sealed record DeletePitch(Guid Id) : ICommand;

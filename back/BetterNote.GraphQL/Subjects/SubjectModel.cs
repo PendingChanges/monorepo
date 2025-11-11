@@ -3,4 +3,4 @@
 namespace BetterNote.Infrastructure.GraphQL.Subjects;
 
 [GraphQLName("Subject")]
-public record SubjectModel(Guid Id, string Title, string Description);
+public sealed record SubjectModel(Guid Id, string Title, string Description);

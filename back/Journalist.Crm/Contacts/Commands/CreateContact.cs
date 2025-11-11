@@ -2,4 +2,4 @@
 
 namespace Journalist.Crm.Domain.Contacts.Commands;
 
-public record CreateContact(Name Name) : ICommand;
+public sealed record CreateContact(Name Name) : ICommand;

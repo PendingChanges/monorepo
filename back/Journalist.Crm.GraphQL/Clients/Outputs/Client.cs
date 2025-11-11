@@ -1,3 +1,3 @@
 ﻿namespace Journalist.Crm.GraphQL.Clients.Outputs;
 
-public record Client(Guid Id, string Name, string UserId, int NbOfPitches);
+public sealed record Client(Guid Id, string Name, string UserId, int NbOfPitches);

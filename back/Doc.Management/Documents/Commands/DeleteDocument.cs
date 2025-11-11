@@ -2,4 +2,4 @@
 
 namespace Doc.Management.Documents.Commands;
 
-public record DeleteDocument(Guid Id) : ICommand;
+public sealed record DeleteDocument(Guid Id) : ICommand;

@@ -2,7 +2,7 @@
 
 namespace Journalist.Crm.GraphQL.Pitches.Outputs;
 
-public record Pitch(Guid Id,
+public sealed record Pitch(Guid Id,
     PitchContent Content,
     DateTime? DeadLineDate,
     DateTime? IssueDate,

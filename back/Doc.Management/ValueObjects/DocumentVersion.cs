@@ -2,7 +2,7 @@
 
 namespace Doc.Management.ValueObjects;
 
-public record DocumentVersion
+public sealed record DocumentVersion
 {
     private readonly Version _version;
 

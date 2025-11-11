@@ -2,7 +2,7 @@
 
 namespace Journalist.Crm.Domain.Pitches;
 
-internal class PitchStateMachine
+internal sealed class PitchStateMachine
 {
     private StateMachine<string, PitchTrigger> _pitchStateMachine;
 

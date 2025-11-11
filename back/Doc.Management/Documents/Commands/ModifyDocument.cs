@@ -3,7 +3,7 @@ using Doc.Management.ValueObjects;
 
 namespace Doc.Management.Documents.Commands;
 
-public record ModifyDocument(
+public sealed record ModifyDocument(
     Guid DocumentId,
     DocumentKey Key,
     string Name,

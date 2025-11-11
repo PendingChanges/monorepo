@@ -1,5 +1,5 @@
 ﻿namespace Journalist.Crm.GraphQL.Contacts.Outputs;
-public class ContactAddedPayload
+public sealed class ContactAddedPayload
 {
     public Guid? ContactId { get; set; }
 }

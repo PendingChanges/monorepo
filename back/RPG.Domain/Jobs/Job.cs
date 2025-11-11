@@ -2,7 +2,7 @@
 
 namespace RPG.Domain.Jobs;
 
-public record Job
+public sealed record Job
 {
     private readonly string _name;
     private int _level;

@@ -1,6 +1,6 @@
 ﻿namespace Doc.Management.Documents.DataModels;
 
-public record DocumentDocument(
+public sealed record DocumentDocument(
     Guid Id,
     string Key,
     string Name,

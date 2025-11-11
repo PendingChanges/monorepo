@@ -2,4 +2,4 @@
 
 namespace Journalist.Crm.Domain.Ideas.Commands;
 
-public record DeleteIdea(Guid Id) : ICommand;
+public sealed record DeleteIdea(Guid Id) : ICommand;

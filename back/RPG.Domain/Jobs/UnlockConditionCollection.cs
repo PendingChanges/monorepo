@@ -1,6 +1,6 @@
 ﻿namespace RPG.Domain.Jobs;
 
-public class UnlockConditionCollection
+public sealed class UnlockConditionCollection
 {
     private readonly List<UnlockCondition> _conditions = new();
 

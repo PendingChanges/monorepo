@@ -2,4 +2,4 @@
 
 namespace Journalist.Crm.Domain.Clients.Commands;
 
-public record DeleteClient(Guid Id) : ICommand;
+public sealed record DeleteClient(Guid Id) : ICommand;

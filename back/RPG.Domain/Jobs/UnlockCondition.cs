@@ -1,6 +1,6 @@
 ﻿namespace RPG.Domain.Jobs;
 
-public record UnlockCondition
+public sealed record UnlockCondition
 {
     public string JobName { get; init; }
     public int LevelRequired { get; init; }

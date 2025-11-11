@@ -2,7 +2,7 @@
 
 namespace Infractructure.GraphQL;
 
-public class GraphQLErrorFilter(ILogger<GraphQLErrorFilter> logger) : IErrorFilter
+public sealed class GraphQLErrorFilter(ILogger<GraphQLErrorFilter> logger) : IErrorFilter
 {
     private readonly ILogger<GraphQLErrorFilter> _logger = logger;
 

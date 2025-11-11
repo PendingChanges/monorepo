@@ -3,7 +3,7 @@ using Doc.Management.ValueObjects;
 
 namespace Doc.Management.Documents.Commands;
 
-public record CreateDocument(
+public sealed record CreateDocument(
     DocumentKey Key,
     string Name,
     string FileNameWithoutExtension,

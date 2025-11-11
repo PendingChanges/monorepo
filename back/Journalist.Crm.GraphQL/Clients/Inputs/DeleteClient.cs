@@ -1,3 +1,3 @@
 ﻿namespace Journalist.Crm.GraphQL.Clients.Inputs;
 
-public record DeleteClient(Guid Id);
+public sealed record DeleteClient(Guid Id);
