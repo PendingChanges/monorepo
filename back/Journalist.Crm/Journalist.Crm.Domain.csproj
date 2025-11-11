@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="Stateless" Version="5.20.0" />
+    <PackageReference Include="Stateless" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CQRS\CQRS.csproj" />

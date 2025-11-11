@@ -1,0 +1,64 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- AWS SDK -->
+    <PackageVersion Include="AWSSDK.S3" Version="4.0.11.1" />
+    
+    <!-- Creedengo -->
+    <PackageVersion Include="Creedengo" Version="2.1.0" />
+    
+    <!-- GraphQL / HotChocolate -->
+    <PackageVersion Include="HotChocolate.AspNetCore" Version="15.1.11" />
+    <PackageVersion Include="HotChocolate.AspNetCore.Authorization" Version="15.1.11" />
+    <PackageVersion Include="HotChocolate.Data" Version="15.1.11" />
+    <PackageVersion Include="HotChocolate.Types.OffsetPagination" Version="15.1.11" />
+    
+    <!-- MailKit -->
+    <PackageVersion Include="MailKit" Version="4.12.1" />
+    
+    <!-- Marten -->
+    <PackageVersion Include="Marten" Version="8.14.0" />
+    
+    <!-- MediatR -->
+    <PackageVersion Include="MediatR" Version="13.1.0" />
+    
+    <!-- Microsoft Extensions -->
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.10" />
+    <PackageVersion Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="9.0.10" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.11" />
+    <PackageVersion Include="Microsoft.Extensions.Options" Version="9.0.11" />
+    
+    <!-- OpenFGA -->
+    <PackageVersion Include="OpenFga.Sdk" Version="0.8.0" />
+    
+    <!-- Serilog -->
+    <PackageVersion Include="Serilog.AspNetCore" Version="9.0.0" />
+    
+    <!-- Stateless -->
+    <PackageVersion Include="Stateless" Version="5.20.0" />
+    
+    <!-- Swagger -->
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+    <PackageVersion Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.6" />
+    
+    <!-- Testing -->
+    <PackageVersion Include="Alba" Version="8.3.0" />
+    <PackageVersion Include="Allure.Reqnroll" Version="2.14.1" />
+    <PackageVersion Include="AutoFixture.Xunit2" Version="4.18.1" />
+    <PackageVersion Include="coverlet.collector" Version="6.0.4" />
+    <PackageVersion Include="coverlet.msbuild" Version="6.0.4" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageVersion Include="Moq" Version="4.20.72" />
+    <PackageVersion Include="Reqnroll.xUnit" Version="3.2.1" />
+    <PackageVersion Include="xunit" Version="2.9.3" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
+    
+    <!-- System Libraries -->
+    <PackageVersion Include="System.Net.Http" Version="4.3.4" />
+    <PackageVersion Include="System.Text.RegularExpressions" Version="4.3.1" />
+  </ItemGroup>
+</Project>

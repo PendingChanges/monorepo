@@ -8,6 +8,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Creedengo" Version="2.1.0"></PackageReference>
+		<PackageReference Include="Creedengo"></PackageReference>
 	</ItemGroup>
 </Project>

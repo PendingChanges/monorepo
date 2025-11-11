@@ -3,7 +3,7 @@
 		<IsPackable>false</IsPackable>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Alba" Version="8.3.0" />
+		<PackageReference Include="Alba" />
 	</ItemGroup>
 	
 	<ItemGroup>
