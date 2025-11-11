@@ -7,10 +7,10 @@ namespace Journalist.Crm.Marten.Clients;
 
 public class ClientProjection : EventProjection
 {
-    public ClientDocument Create(ClientCreated clientCreated)
+    public static ClientDocument Create(ClientCreated clientCreated)
         => new(clientCreated.Id, clientCreated.Name, clientCreated.OwnerId, []);
 
-    public void Project(ClientDeleted @event, IDocumentOperations ops)
+    public static void Project(ClientDeleted @event, IDocumentOperations ops)
         => ops.Delete<ClientDocument>(@event.Id);
 
     public async Task Project(ClientRenamed @event, IDocumentOperations ops)

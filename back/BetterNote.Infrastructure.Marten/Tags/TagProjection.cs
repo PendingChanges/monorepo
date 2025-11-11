@@ -6,10 +6,10 @@ using Marten.Events.Projections;
 namespace BetterNote.Infrastructure.Marten.Tags;
 public class TagProjection : EventProjection
 {
-    public TagDocument Create(TagCreated tagCreated)
+    public static TagDocument Create(TagCreated tagCreated)
         => new(tagCreated.TagId, tagCreated.Value);
 
-    public void Project(TagDeleted @event, IDocumentOperations ops)
+    public static void Project(TagDeleted @event, IDocumentOperations ops)
     {
         ops.Delete<TagDocument>(@event.TagId);
         ops.DeleteWhere<TaggingDocument>(t => t.TagId == @event.TagId);

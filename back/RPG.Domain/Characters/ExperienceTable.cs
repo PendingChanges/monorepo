@@ -1,4 +1,4 @@
-﻿
+﻿    
 namespace RPG.Domain.Characters;
 public sealed class ExperienceTable
 {

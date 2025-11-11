@@ -2,6 +2,7 @@
 using Doc.Management.Documents.DataModels;
 using Doc.Management.Marten.Documents;
 using Infrastructure.Marten;
+using JasperFx.Events.Projections;
 using Marten.Events.Projections;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

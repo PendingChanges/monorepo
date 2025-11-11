@@ -1,10 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <PackageReference Include="Creedengo" Version="2.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BetterNote.Domain\BetterNote.Domain.csproj" />
     <ProjectReference Include="..\CQRS\CQRS.csproj" />
   </ItemGroup>

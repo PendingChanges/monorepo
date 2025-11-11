@@ -3,6 +3,7 @@ using Marten.Events;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using CQRS;
+using JasperFx.Events;
 
 namespace Infrastructure.Marten;
 
@@ -10,15 +11,15 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection AddCustomMarten(this IServiceCollection services, IConfigurationRoot configuration, Action<StoreOptions> configure)
     {
-        Action<StoreOptions> value = options =>
-                {
-                    options.Connection(configuration.GetConnectionString("Marten") ?? throw new ArgumentException("missing connection string"));
+        void value(StoreOptions options)
+        {
+            options.Connection(configuration.GetConnectionString("Marten") ?? throw new ArgumentException("missing connection string"));
 
-                    // Events
-                    options.Events.StreamIdentity = StreamIdentity.AsGuid;
+            // Events
+            options.Events.StreamIdentity = StreamIdentity.AsGuid;
 
-                    configure(options);
-                };
+            configure(options);
+        }
 
         services.AddMarten(value);
 

@@ -15,6 +15,7 @@ using Marten.Events.Projections;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Infrastructure.Marten;
+using JasperFx.Events.Projections;
 
 namespace Journalist.Crm.Marten;
 

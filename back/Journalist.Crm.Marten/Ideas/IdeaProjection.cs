@@ -7,10 +7,10 @@ namespace Journalist.Crm.Marten.Ideas;
 
 public class IdeaProjection : EventProjection
 {
-    public IdeaDocument Create(IdeaCreated ideaCreated)
+    public static IdeaDocument Create(IdeaCreated ideaCreated)
         => new(ideaCreated.Id, ideaCreated.Name, ideaCreated.Description, ideaCreated.OwnerId, []);
 
-    public void Project(IdeaDeleted ideaDeleted, IDocumentOperations ops)
+    public static void Project(IdeaDeleted ideaDeleted, IDocumentOperations ops)
         => ops.Delete<IdeaDocument>(ideaDeleted.Id);
 
     public async Task Project(IdeaModified @event, IDocumentOperations ops)

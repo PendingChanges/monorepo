@@ -25,7 +25,9 @@ public sealed class SubjectQueries
         return new CollectionSegment<SubjectModel>(result.Data.MapToSubjectModels(), pageInfo, result.TotalItemCount);
     }
 
+#pragma warning disable S2325 // Methods and properties that don't access instance data should be static
     public async Task<SubjectModel?> GetSubjectAsync(
+#pragma warning restore S2325 // Methods and properties that don't access instance data should be static
         [Service] ISender sender,
         Guid id,
         CancellationToken cancellationToken = default)

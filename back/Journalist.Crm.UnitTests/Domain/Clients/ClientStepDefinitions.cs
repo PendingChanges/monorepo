@@ -1,6 +1,6 @@
 using Journalist.Crm.Domain.Clients;
 using Journalist.Crm.Domain.Clients.Events;
-using TechTalk.SpecFlow;
+using Reqnroll;
 using Xunit;
 
 namespace Journalist.Crm.UnitTests.Domain.Clients;

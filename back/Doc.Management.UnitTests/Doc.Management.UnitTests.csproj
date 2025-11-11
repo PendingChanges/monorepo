@@ -2,34 +2,15 @@
 	<PropertyGroup>
 		<IsPackable>false</IsPackable>
 	</PropertyGroup>
-	
 	<ItemGroup>
-		<PackageReference Include="Alba" Version="8.1.1" />
-		<PackageReference Include="AutoFixture.Xunit2" Version="4.18.1" />
-		<PackageReference Include="coverlet.msbuild" Version="6.0.4">
-		  <PrivateAssets>all</PrivateAssets>
-		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-		</PackageReference>
-		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.2" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
-		<PackageReference Include="Moq" Version="4.20.72" />
-		<PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
-		<PackageReference Include="System.Text.RegularExpressions" Version="4.3.1" />
-		<PackageReference Include="xunit" Version="2.9.3" />
-		<PackageReference Include="xunit.runner.visualstudio" Version="3.0.2">
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
-		<PackageReference Include="coverlet.collector" Version="6.0.4">
-			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-			<PrivateAssets>all</PrivateAssets>
-		</PackageReference>
+		<PackageReference Include="Alba" Version="8.3.0" />
 	</ItemGroup>
-
+	
 	<ItemGroup>
 	  <ProjectReference Include="..\Doc.Management.APi\Doc.Management.Api.csproj" />
 	  <ProjectReference Include="..\Doc.Management.Marten\Doc.Management.Marten.csproj" />
 	  <ProjectReference Include="..\Doc.Management\Doc.Management.csproj" />
+	  <ProjectReference Include="..\Tests.Common\Tests.Common.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<ItemGroup>
-		<PackageReference Include="Creedengo" Version="2.1.0" />
-		<PackageReference Include="Marten" Version="7.40.3" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.4" />
+		<PackageReference Include="Marten" Version="8.14.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.11" />
 	</ItemGroup>
 	<ItemGroup>
 	  <ProjectReference Include="..\BetterNote.Application\BetterNote.Application.csproj" />

@@ -21,7 +21,7 @@ public class PitchProjection : EventProjection
             ops.Store(pitchUpdated);
         }
     }
-    public async Task Project(PitchCreated pitchCreated, IDocumentOperations ops)
+    public static async Task Project(PitchCreated pitchCreated, IDocumentOperations ops)
     {
         ops.Store(new PitchDocument(pitchCreated.Id, pitchCreated.Content, pitchCreated.DeadLineDate, pitchCreated.IssueDate, pitchCreated.ClientId, pitchCreated.IdeaId, pitchCreated.OwnerId, PitchStates.Draft));
 

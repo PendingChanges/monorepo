@@ -18,7 +18,7 @@ public sealed class AggregateRepositoryShould
     {
         _mockDocumentStore = new Mock<IDocumentStore>();
         _mockSession = new Mock<IDocumentSession>();
-        var eventStoreMock = new Mock<IEventStore>();
+        var eventStoreMock = new Mock<IEventStoreOperations>();
         _mockSession.Setup(_ => _.Events).Returns(eventStoreMock.Object);
         _mockDocumentStore
             .Setup(x => x.LightweightSession(It.IsAny<IsolationLevel>()))

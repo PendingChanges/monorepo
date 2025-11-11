@@ -10,7 +10,9 @@ namespace BetterNote.Infrastructure.GraphQL.Subjects;
 [ExtendObjectType(typeof(SubjectModel))]
 public class SubjectExtensions
 {
+#pragma warning disable S2325 // Methods and properties that don't access instance data should be static
     public async Task<IEnumerable<TagModel>> GetTagsAsync(
+#pragma warning restore S2325 // Methods and properties that don't access instance data should be static
         [Parent] SubjectModel subject,
         [Service] TagsBySubjectIdDataLoader tagsBySubjectIdDataLoader,
         [Service] IContext context,

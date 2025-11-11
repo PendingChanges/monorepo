@@ -1,4 +1,4 @@
-﻿using TechTalk.SpecFlow;
+﻿using Reqnroll;
 using Xunit;
 
 namespace Journalist.Crm.UnitTests.Domain;

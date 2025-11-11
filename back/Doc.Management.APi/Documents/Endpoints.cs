@@ -176,7 +176,7 @@ internal static class Endpoints
 
         var key = DocumentKey.NewDocumentKey();
 
-        using (var stream = new MemoryStream())
+        await using (var stream = new MemoryStream())
         {
             await uploadFile.CopyToAsync(stream, cancellationToken);
 

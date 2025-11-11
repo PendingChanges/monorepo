@@ -2,18 +2,12 @@
 using GreenDonut;
 
 namespace BetterNote.Infrastructure.Marten.Tags;
-public class TagsBySubjectIdDataLoader : GroupedDataLoader<Guid, TagDocument>
+public class TagsBySubjectIdDataLoader(
+    IReadTags tagReader,
+    IBatchScheduler batchScheduler,
+    DataLoaderOptions options) : GroupedDataLoader<Guid, TagDocument>(batchScheduler, options)
 {
-    private readonly IReadTags _tagReader;
-
-    public TagsBySubjectIdDataLoader(
-        IReadTags tagReader,
-        IBatchScheduler batchScheduler,
-        DataLoaderOptions options)
-        : base(batchScheduler, options)
-    {
-        _tagReader = tagReader;
-    }
+    private readonly IReadTags _tagReader = tagReader;
 
     protected override async Task<ILookup<Guid, TagDocument>> LoadGroupedBatchAsync(IReadOnlyList<Guid> keys, CancellationToken cancellationToken)
     {

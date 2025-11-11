@@ -1,5 +1,2 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <PackageReference Include="Creedengo" Version="2.1.0" />
-  </ItemGroup>
 </Project>

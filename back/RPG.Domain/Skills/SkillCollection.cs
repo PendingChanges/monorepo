@@ -1,5 +1,7 @@
 ﻿namespace RPG.Domain.Skills;
-public class SkillCollection
+public sealed class SkillCollection
 {
-    private List<Skill> _skills = new List<Skill>();
+    private readonly List<Skill> _skills = new List<Skill>();
+
+    public IReadOnlyList<Skill> Skills => _skills.AsReadOnly();
 }

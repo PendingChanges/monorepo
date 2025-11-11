@@ -4,7 +4,7 @@ namespace RPG.Domain.Jobs;
 
 public record Job
 {
-    private string _name;
+    private readonly string _name;
     private int _level;
     private int _totalJobPointsGained;
     private int _jobPointsUnspent;
@@ -18,6 +18,7 @@ public record Job
     public int JobPointsUnspent => _jobPointsUnspent;
     public bool IsUnlocked => _isUnlocked;
     public UnlockConditionCollection UnlockConditions => _unlockConditions;
+    public SkillCollection Skills => _skillCollection;
 
     private Job(string name, int level, int totalJobPointsGained, int jobPointsUnspent, bool isUnlocked, UnlockConditionCollection unlockConditions)
     {

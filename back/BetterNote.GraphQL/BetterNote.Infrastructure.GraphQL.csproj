@@ -1,10 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <PackageReference Include="Creedengo" Version="2.1.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\BetterNote.Application\BetterNote.Application.csproj" />
     <ProjectReference Include="..\Infractructure.GraphQL\Infractructure.GraphQL.csproj" />
   </ItemGroup>

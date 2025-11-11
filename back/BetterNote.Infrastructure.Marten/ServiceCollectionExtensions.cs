@@ -3,6 +3,7 @@ using BetterNote.Application.Tags;
 using BetterNote.Infrastructure.Marten.Subjects;
 using BetterNote.Infrastructure.Marten.Tags;
 using Infrastructure.Marten;
+using JasperFx.Events.Projections;
 using Marten.Events.Projections;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

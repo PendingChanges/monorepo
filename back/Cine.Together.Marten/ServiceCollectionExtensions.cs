@@ -2,6 +2,7 @@
 using Cine.Together.Domain.Movies.DataModels;
 using Cine.Together.Marten.Movies;
 using Infrastructure.Marten;
+using JasperFx.Events.Projections;
 using Marten.Events.Projections;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
