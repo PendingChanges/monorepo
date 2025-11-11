@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Cine.Together.Domain\Cine.Together.Domain.csproj" />
 	  <ProjectReference Include="..\Infractructure.GraphQL\Infractructure.GraphQL.csproj" />
 	</ItemGroup>
 

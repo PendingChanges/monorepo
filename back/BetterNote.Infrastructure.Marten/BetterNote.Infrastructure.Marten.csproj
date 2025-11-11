@@ -4,7 +4,6 @@
 		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\BetterNote.Application\BetterNote.Application.csproj" />
 	  <ProjectReference Include="..\Infrastructure.Marten\Infrastructure.Marten.csproj" />
 	</ItemGroup>
 	

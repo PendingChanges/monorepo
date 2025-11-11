@@ -1,5 +1,4 @@
 ﻿using BetterNote.Domain.Persons.Events;
-using BetterNote.Domain.Subjects.Events;
 using CQRS;
 
 namespace BetterNote.Domain.Persons;

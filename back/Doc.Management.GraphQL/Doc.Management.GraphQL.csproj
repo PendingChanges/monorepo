@@ -3,7 +3,6 @@
 	  <Folder Include="Documents\Inputs\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\Doc.Management\Doc.Management.csproj" />
 	  <ProjectReference Include="..\Infractructure.GraphQL\Infractructure.GraphQL.csproj" />
 	</ItemGroup>
 </Project>

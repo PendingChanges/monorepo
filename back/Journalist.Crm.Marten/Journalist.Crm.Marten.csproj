@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Infrastructure.Marten\Infrastructure.Marten.csproj" />
-    <ProjectReference Include="..\Journalist.Crm\Journalist.Crm.Domain.csproj" />
   </ItemGroup>
 
 </Project>

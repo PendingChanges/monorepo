@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\BetterNote.Application\BetterNote.Application.csproj" />
     <ProjectReference Include="..\Infractructure.GraphQL\Infractructure.GraphQL.csproj" />
   </ItemGroup>
 

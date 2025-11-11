@@ -2,8 +2,6 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\Infractructure.GraphQL\Infractructure.GraphQL.csproj" />
-	  <ProjectReference Include="..\Journalist.Crm.CommandHandlers\Journalist.Crm.CommandHandlers.csproj" />
-	  <ProjectReference Include="..\Journalist.Crm\Journalist.Crm.Domain.csproj" />
 	</ItemGroup>
 
 </Project>

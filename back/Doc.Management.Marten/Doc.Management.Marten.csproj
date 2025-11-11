@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\Doc.Management\Doc.Management.csproj" />
     <ProjectReference Include="..\Infrastructure.Marten\Infrastructure.Marten.csproj" />
   </ItemGroup>
 
